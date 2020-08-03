@@ -1,0 +1,42 @@
+//--------------------------------------------------------------
+// Private Application Configuration options
+//--------------------------------------------------------------
+
+ApplicationMgr.DLLs += { "EmcRec" };
+ApplicationMgr.DLLs += { "EmcRecGeoSvc" };
+ApplicationMgr.DLLs += { "HbookCnv"}; 
+
+
+ApplicationMgr.TopAlg = { "EmcRec" };
+ApplicationMgr.ExtSvc += { "EmcRecGeoSvc" };
+
+
+ApplicationMgr.DLLs += { "AsciiFileCnv" }; 
+ApplicationMgr.ExtSvc += { "EvtPersistencySvc/EventPersistencySvc" };
+ApplicationMgr.ExtSvc += { "AsciiFileCnvSvc","AsciiFileEventSelector/EventSelector"};
+EventPersistencySvc.CnvServices     = { "AsciiFileCnvSvc" };
+
+AsciiFileEventSelector.InputFiles = { "AsciiDmp_out.dat" }; 
+
+//--------------------------------------------------------------
+// Set output level threshold (>=)
+//(1=VERBOSE, 2=DEBUG, 3=INFO, 4=WARNING, 5=ERROR, 6=FATAL, 7=ALWAYS )
+//--------------------------------------------------------------
+MessageSvc.OutputLevel      = 4;
+// Output reconstruction detail
+EmcRec.Output=false;
+
+//--------------------------------------------------------------
+// Event related parameters
+//--------------------------------------------------------------
+
+// Number of events to be processed (default is 10)
+ApplicationMgr.EvtMax = 100000;
+//ApplicationMgr.EvtSel = "NONE";
+
+//--------------------------------------------------------------
+// NTuples parameters
+//--------------------------------------------------------------
+ApplicationMgr.HistogramPersistency = "HBOOK";
+HistogramPersistencySvc.OutputFile = "g.hbk";
+NTupleSvc.Output = { "FILE1 DATAFILE='g.hbk' OPT='NEW' TYP='HBOOK'" };

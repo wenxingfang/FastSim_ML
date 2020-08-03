@@ -1,0 +1,134 @@
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/core/StorageImpl.h:6,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/core/Storage.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/Tensor.h:9,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/Tensor.h:2,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/Context.h:4,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/ATen.h:5,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:3,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h: In constructor ‘c10::intrusive_ptr_target::intrusive_ptr_target(c10::intrusive_ptr_target&&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h:108:47: warning: unused parameter ‘other’ [-Wunused-parameter]
+   intrusive_ptr_target(intrusive_ptr_target&& other) noexcept : intrusive_ptr_target() {}
+                        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h: In member function ‘c10::intrusive_ptr_target& c10::intrusive_ptr_target::operator=(c10::intrusive_ptr_target&&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h:109:58: warning: unused parameter ‘other’ [-Wunused-parameter]
+   intrusive_ptr_target& operator=(intrusive_ptr_target&& other) noexcept { return *this; }
+                                   ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h: In copy constructor ‘c10::intrusive_ptr_target::intrusive_ptr_target(const c10::intrusive_ptr_target&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h:110:52: warning: unused parameter ‘other’ [-Wunused-parameter]
+   intrusive_ptr_target(const intrusive_ptr_target& other) noexcept : intrusive_ptr_target() {}
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h: In member function ‘c10::intrusive_ptr_target& c10::intrusive_ptr_target::operator=(const c10::intrusive_ptr_target&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/intrusive_ptr.h:111:63: warning: unused parameter ‘other’ [-Wunused-parameter]
+   intrusive_ptr_target& operator=(const intrusive_ptr_target& other) noexcept { return *this; }
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/Logging.h:28,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/core/TensorImpl.h:18,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/Tensor.h:11,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/Tensor.h:2,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/Context.h:4,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/ATen.h:5,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:3,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/logging_is_not_google_glog.h: In member function ‘void c10::LoggerVoidify::operator&(const ostream&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/c10/util/logging_is_not_google_glog.h:59:38: warning: unused parameter ‘s’ [-Wunused-parameter]
+   void operator&(const std::ostream& s) {}
+                  ~~~~~~~~~~~~~~~~~~~~^
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/Context.h:10,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/ATen.h:5,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:3,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h: In member function ‘virtual at::Generator* at::CUDAHooksInterface::getDefaultCUDAGenerator(c10::DeviceIndex) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:66:58: warning: unused parameter ‘device_index’ [-Wunused-parameter]
+   virtual Generator* getDefaultCUDAGenerator(DeviceIndex device_index = -1) const {
+                                              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h: In member function ‘virtual c10::Device at::CUDAHooksInterface::getDeviceFromPtr(void*) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:70:41: warning: unused parameter ‘data’ [-Wunused-parameter]
+   virtual Device getDeviceFromPtr(void* data) const {
+                                   ~~~~~~^~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h: In member function ‘virtual int64_t at::CUDAHooksInterface::cuFFTGetPlanCacheMaxSize(int64_t) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:131:52: warning: unused parameter ‘device_index’ [-Wunused-parameter]
+   virtual int64_t cuFFTGetPlanCacheMaxSize(int64_t device_index) const {
+                                            ~~~~~~~~^~~~~~~~~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h: In member function ‘virtual void at::CUDAHooksInterface::cuFFTSetPlanCacheMaxSize(int64_t, int64_t) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:135:49: warning: unused parameter ‘device_index’ [-Wunused-parameter]
+   virtual void cuFFTSetPlanCacheMaxSize(int64_t device_index, int64_t max_size) const {
+                                         ~~~~~~~~^~~~~~~~~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:135:71: warning: unused parameter ‘max_size’ [-Wunused-parameter]
+   virtual void cuFFTSetPlanCacheMaxSize(int64_t device_index, int64_t max_size) const {
+                                                               ~~~~~~~~^~~~~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h: In member function ‘virtual int64_t at::CUDAHooksInterface::cuFFTGetPlanCacheSize(int64_t) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:139:49: warning: unused parameter ‘device_index’ [-Wunused-parameter]
+   virtual int64_t cuFFTGetPlanCacheSize(int64_t device_index) const {
+                                         ~~~~~~~~^~~~~~~~~~~~
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h: In member function ‘virtual void at::CUDAHooksInterface::cuFFTClearPlanCache(int64_t) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/detail/CUDAHooksInterface.h:143:44: warning: unused parameter ‘device_index’ [-Wunused-parameter]
+   virtual void cuFFTClearPlanCache(int64_t device_index) const {
+                                    ~~~~~~~~^~~~~~~~~~~~
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/Dict_inl.h:4,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/Dict.h:372,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/ivalue_inl.h:11,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/ivalue.h:569,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/stack.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/tracer.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/autograd/generated/variable_factories.h:9,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/api/include/torch/types.h:7,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:3,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/jit_type.h: In member function ‘virtual c10::TypePtr c10::Type::createWithContained(std::vector<std::shared_ptr<c10::Type> >) const’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/jit_type.h:182:60: warning: unused parameter ‘contained_types’ [-Wunused-parameter]
+   virtual TypePtr createWithContained(std::vector<TypePtr> contained_types) const {
+                                       ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/tracer.h:8,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/autograd/generated/variable_factories.h:9,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/api/include/torch/types.h:7,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:3,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/utils/variadic.h: In member function ‘void torch::CountTensors::operator()(const at::Tensor&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/utils/variadic.h:77:37: warning: unused parameter ‘x’ [-Wunused-parameter]
+   void operator()(const at::Tensor& x) {
+                   ~~~~~~~~~~~~~~~~~~^
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/utils/variadic.h: In member function ‘void torch::CountVariables::operator()(const torch::autograd::Variable&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/utils/variadic.h:92:45: warning: unused parameter ‘x’ [-Wunused-parameter]
+   void operator()(const autograd::Variable& x) {
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/autograd/generated/variable_factories.h:9,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/api/include/torch/types.h:7,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:3,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/tracer.h: In lambda function:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/tracer.h:51:26: warning: unused parameter ‘var’ [-Wunused-parameter]
+       [](const Variable& var) { return ""; };
+          ~~~~~~~~~~~~~~~~^~~
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/dispatch/OperatorEntry.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/dispatch/Dispatcher.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/operator.h:12,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/custom_operator.h:3,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:5,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/dispatch/DispatchTable.h: In member function ‘void c10::detail::KernelTable_::removeIfExists(c10::TensorTypeId, const string&)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/ATen/core/dispatch/DispatchTable.h:55:60: warning: unused parameter ‘operator_name’ [-Wunused-parameter]
+   void removeIfExists(TensorTypeId key, const std::string& operator_name) {
+                                         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/script/module.h:14,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/import.h:4,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:6,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/script/compilation_unit.h: In member function ‘void torch::jit::script::CompilationUnit::set_optimized(bool)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/script/compilation_unit.h:71:27: warning: unused parameter ‘o’ [-Wunused-parameter]
+   void set_optimized(bool o) {
+                      ~~~~~^
+In file included from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/import.h:4,
+                 from /hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/script.h:6,
+                 from ./NNPred.cc:2:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/script/module.h: In member function ‘void torch::jit::script::Module::set_optimized(bool)’:
+/hpcfs/juno/junogpu/fangwx/mini_conda/envs/pyTorch_v1p2_py37/lib/python3.7/site-packages/torch/include/torch/csrc/jit/script/module.h:125:27: warning: unused parameter ‘o’ [-Wunused-parameter]
+   void set_optimized(bool o) {
+                      ~~~~~^
+./NNPred.cc: In member function ‘std::vector<float>* NNPred::get(int, float, const std::vector<float>&, float)’:
+./NNPred.cc:76:25: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+ for(unsigned int i=0; i < N_size; i++)
+                       ~~^~~~~~~~

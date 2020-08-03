@@ -1,0 +1,96 @@
+
+2009-10-30 He Miao  <hem@ihep.ac.cn>
+  * Set parameters in constructor of EmcRec.
+
+2009-10-13 He Miao  <hem@ihep.ac.cn>
+  * Change for multi-thread. RawDataProviderSvc test successfully.
+
+2009-09-24 He Miao  <hem@ihep.ac.cn>
+  * Change for multi-thread.
+
+2009-05-14 He Miao  <hem@ihep.ac.cn>
+  * Add cable connection correction.
+
+2009-05-06 He Miao  <hem@ihep.ac.cn>
+  * Use interpolation to calculate energy error.
+
+2009-04-13 He Miao  <hem@ihep.ac.cn>
+  * Update energy correction constants in endcap according to MDC geometry update.
+
+2009-04-02 He Miao  <hem@ihep.ac.cn>
+  * Remove reading database in share/EmcRecOptions.txt.
+
+2009-03-05 He Miao  <hem@ihep.ac.cn>
+  * Update energy correction constants.
+
+2009-02-18 He Miao  <hem@ihep.ac.cn>
+  * Add energy correction according to energy and theta angle.
+
+2009-01-13 He Miao  <hem@ihep.ac.cn>
+  * Use time information in DstEmcShower instead of RecEmcShower.
+  * Use HepSymMatrix instead of dx, dy, dz.
+
+2008-12-11 He Miao  <hem@ihep.ac.cn>
+  * Set time window from 5 to 35 to reduce background noise.
+  * Remove bias correction for electronics noise.
+  * Use flag from RawDataProviderSvc to control online/offline mode.
+
+2008-10-14 He Miao  <hem@ihep.ac.cn>
+  * Update calibration constants from bhabha calibration.
+
+2008-7-20 He Miao  <hem@ihep.ac.cn>
+  * Add position mode, use 3x3, 5x5, or all crystals for position calculation.
+  * When energy>3GeV, don't use energy correction constants.
+  * Update digi calibration constants.
+
+2008-7-16 He Miao  <hem@ihep.ac.cn>
+  * Put parameters into EmcRecPara.dat.
+
+2008-4-18 He Miao  <hem@ihep.ac.cn>
+  * Add online mode in jobOption.
+
+2008-4-16 He Miao  <hem@ihep.ac.cn>
+  * Update CalibConst.root.
+
+2008-3-27 He Miao  <hem@ihep.ac.cn>
+  * Get shower energy correction parameters from EmcRecParameter instead of EmcCalibConstSvc.
+
+2008-3-23 He Miao  <hem@ihep.ac.cn>
+  * ADC to energy by RawDataUtil.
+
+2008-3-19 He Miao  <hem@ihep.ac.cn>
+  * Change unit, mm->cm, MeV->GeV.
+
+2008-3-11 He Miao  <hem@ihep.ac.cn>
+  * Fix a bug in LATMoment.
+
+2008-3-6 He Miao  <hem@ihep.ac.cn>
+  * Make protection for Lat Moment caculation.
+
+2008-3-4 He Miao  <hem@ihep.ac.cn>
+  * Rename event model from EmcRec to RecEmc.
+  * Change cluster splitting parameters.
+  * Add error matrix.
+
+2008-1-25 He Miao  <hem@ihep.ac.cn>
+  * Set output level. No root file with default.
+  * Set cluster id as the seed id.
+  * Add a splitting cut, number of seeds < 20.
+  * Use EmcRecShowerShape to calculate shower moments.
+  * Use EmcRecShowerEnergy to calculate shower energy.
+  * Insert cluster's pointer to shower.
+
+2006-8-16  He Miao
+  * Get ADC2E constants in EmcRecDigit2Hit. Get energy correction constants in EmcRecShowerEAll.
+
+2006-5-31  He Miao
+  * Sort hits and showers by energy. Deal with the same energy neighbor seeds in EmcRecSeedEThreshold.
+
+2006-5-29  He Miao
+  * Use second moment to describe the shape of a cluster, and to decide whether the cluster should be splitted. In shower splitting algorithm, the weight of each hit is assigned with the parameters of shower lateral profile. And the iteration is employed to get the precise centroid of each shower.
+
+2006-4-27  He Miao  <hem@ihep.ac.cn>
+  * Correct bias caused by electonics noise, in EmcRecDigit2Hit.
+
+2005-8-02  Ma Qiumei  <maqm@ihep.ac.cn>
+  * modify cmt/requirements and jobOptions for Reconstruction_together

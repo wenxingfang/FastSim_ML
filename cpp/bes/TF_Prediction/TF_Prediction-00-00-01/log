@@ -1,0 +1,180 @@
+
+**************************************************
+               BOSS version: 7.0.3
+************** BESIII Collaboration **************
+
+the jobOptions file is : share/TF_Prediction.txt
+JobOptionsSvc        INFO # =======> /junofs/users/wxfang/FastSim/bes3/workarea/BesExamples/TF_Prediction/TF_Prediction-00-00-01/share/TF_Prediction.txt
+JobOptionsSvc        INFO # (12,1): ApplicationMgr.DLLs += ["RootCnvSvc"]
+JobOptionsSvc        INFO # (13,1): ApplicationMgr.ExtSvc += ["EvtPersistencySvc/EventPersistencySvc"]
+JobOptionsSvc        INFO # (14,1): ApplicationMgr.ExtSvc += ["RootEvtSelector/EventSelector", "RootCnvSvc/EventCnvSvc"]
+JobOptionsSvc        INFO # (15,1): EventPersistencySvc.CnvServices += ["EventCnvSvc"]
+JobOptionsSvc        INFO # (16,1): ApplicationMgr.DLLs += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (17,1): ApplicationMgr.ExtSvc += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (20,1): ApplicationMgr.DLLs += ["TF_Prediction"]
+JobOptionsSvc        INFO # (21,1): ApplicationMgr.TopAlg += ["Prediction"]
+JobOptionsSvc        INFO # =======> /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Emc/EmcCalibConstSvc/EmcCalibConstSvc-00-00-12/share/jobOptions_EmcCalibConstSvc.txt
+JobOptionsSvc        INFO # (8,1): ApplicationMgr.DLLs += ["EmcCalibConstSvc"]
+JobOptionsSvc        INFO # (10,1): ApplicationMgr.ExtSvc += ["EmcCalibConstSvc"]
+JobOptionsSvc        INFO # =======> /junofs/users/wxfang/FastSim/bes3/workarea/Reconstruction/EmcRec/EmcRec-01-02-57/share/EmcRecOptions.txt
+JobOptionsSvc        INFO # (6,1): CalibRootCnvSvc.emcrootfile = "$BESCALDATA/constant/EmcCalibConst.root"
+JobOptionsSvc        INFO # (8,1): ApplicationMgr.DLLs += ["EmcRec"]
+JobOptionsSvc        INFO # (9,1): ApplicationMgr.DLLs += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (10,1): ApplicationMgr.DLLs += ["RawDataProviderSvc"]
+JobOptionsSvc        INFO # (12,1): ApplicationMgr.TopAlg += ["EmcRec"]
+JobOptionsSvc        INFO # (13,1): ApplicationMgr.ExtSvc += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (14,1): ApplicationMgr.ExtSvc += ["RawDataProviderSvc"]
+JobOptionsSvc        INFO # (16,1): EmcRecAlg.Output = 0
+JobOptionsSvc        INFO # (17,1): EmcRecAlg.EventNb = 0
+JobOptionsSvc        INFO # (18,1): EmcRecAlg.DigiCalib = 1
+JobOptionsSvc        INFO # (19,1): EmcRecAlg.TofEnergy = 0
+JobOptionsSvc        INFO # (20,1): EmcRecAlg.OnlineMode = 0
+JobOptionsSvc        INFO # (21,1): EmcRecAlg.TimeMin = 0
+JobOptionsSvc        INFO # (22,1): EmcRecAlg.TimeMax = 35
+JobOptionsSvc        INFO # (23,1): EmcRecAlg.PositionMode = ["log", "5x5"]
+JobOptionsSvc        INFO # (25,1): EmcRecAlg.Do_GAN = 1
+JobOptionsSvc        INFO # (29,1): EmcRecAlg.MethodMode = 1
+JobOptionsSvc        INFO # (33,1): EmcRecAlg.PosCorr = 1
+JobOptionsSvc        INFO # (37,1): EmcRecAlg.ElecSaturation = 1
+JobOptionsSvc        INFO # =======> /junofs/users/wxfang/FastSim/bes3/workarea/BesExamples/TF_Prediction/TF_Prediction-00-00-01/share/TF_Prediction.txt
+JobOptionsSvc        INFO # (29,1): MessageSvc.OutputLevel = 2
+JobOptionsSvc        INFO # (30,1): MessageSvc.useColors = 1
+JobOptionsSvc        INFO # (44,1): Prediction.MyInt = 42
+JobOptionsSvc        INFO # (45,1): Prediction.MyBool = 1
+JobOptionsSvc        INFO # (46,1): Prediction.MyDouble = 3.14159
+JobOptionsSvc        INFO # (47,1): Prediction.MyStringVec = ["Welcome", "to", "Boss", "Framework", "Tutorial"]
+JobOptionsSvc        INFO # (49,1): Prediction.em_Low_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_Low.pb"
+JobOptionsSvc        INFO # (50,1): Prediction.em_High_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_High.pb"
+JobOptionsSvc        INFO # (51,1): Prediction.ep_Low_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_Low.pb"
+JobOptionsSvc        INFO # (52,1): Prediction.ep_High_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_High.pb"
+JobOptionsSvc        INFO # (53,1): Prediction.input_op_name = "gen_input"
+JobOptionsSvc        INFO # (54,1): Prediction.output_op_name = "re_lu_5/Relu"
+JobOptionsSvc        INFO # (55,1): Prediction.ElectronicsNoiseLevel = 0.0005
+JobOptionsSvc        INFO # (57,1): EventCnvSvc.digiRootInputFile = ["/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec"]
+JobOptionsSvc        INFO # (60,1): ApplicationMgr.EvtMax = 100
+JobOptionsSvc        INFO Job options successfully read in from share/TF_Prediction.txt
+ApplicationMgr      DEBUG Getting my own properties[m
+ApplicationMgr    SUCCESS 
+====================================================================================================================================
+                                                   Welcome to ApplicationMgr (GaudiCoreSvc v1r5)
+                                          running on lxslc606.ihep.ac.cn on Tue Oct 22 13:33:55 2019
+====================================================================================================================================[m
+
+[1mRooFit v3.56 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+ApplicationMgr       INFO Successfully loaded modules : RootCnvSvc, EmcRecGeoSvc, TF_Prediction, EmcCalibConstSvc, EmcRec, RawDataProviderSvc[m
+RootCnvSvc          DEBUG RootCnvSvc::constructor[m
+ApplicationMgr       INFO Application Manager Configured successfully[m
+ServiceManager      DEBUG Initializing service IncidentSvc[m
+IncidentSvc         DEBUG Service base class initialized successfully[m
+ServiceManager      DEBUG Initializing service EventPersistencySvc[m
+EventPersistenc...  DEBUG  'CnvServices':[ 'EventCnvSvc' ][m
+EventPersistenc...  DEBUG Service base class initialized successfully[m
+ServiceManager      DEBUG Initializing service EventSelector[m
+EventSelector       DEBUG Service base class initialized successfully[m
+EventSelector       DEBUG RootEvtSelector::initialize[m
+EventSelector        INFO RootEvtSelector input has been set to ROOT[m
+EventDataSvc        DEBUG Service base class initialized successfully[m
+EventSelector        INFO currentFile in RootEvtSelector::initialize [m
+TagFilterSvc         INFO TagFilterSvc::initialize()[m
+TagFilterSvc        DEBUG Service base class initialized successfully[m
+EventSelector        INFO get the TagFilterSvc[m
+TagFilterSvc, number of tag files: 0
+ServiceManager      DEBUG Initializing service EventCnvSvc[m
+EventCnvSvc         DEBUG RootCnvSvc::initialize[m
+EventCnvSvc         DEBUG Service base class initialized successfully[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMdcDedxCol classid: 132492[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst classid: 1400[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/EmcDigiCol classid: 132392[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/EmcMcHitCol classid: 132285[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstEmcShowerCol classid: 132512[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event classid: 110[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EventHeader classid: 112[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Navigator classid: 5101[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstExtTrackCol classid: 132532[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC classid: 1200[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/McParticleCol classid: 263345[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/MdcDigiCol classid: 132382[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMdcKalTrackCol classid: 132487[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/MdcMcHitCol classid: 132283[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMdcTrackCol classid: 132482[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/MucDigiCol classid: 132412[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/MucMcHitCol classid: 132286[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMucTrackCol classid: 132522[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi classid: 1300[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/TofDigiCol classid: 132402[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/TofMcHitCol classid: 132284[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstTofTrackCol classid: 132502[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/LumiDigiCol classid: 132422[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Trig classid: 2100[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Trig/TrigData classid: 2120[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt classid: 2200[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt/HltRawCol classid: 133282[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt/HltInf classid: 2220[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt/DstHltInf classid: 2230[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon classid: 3000[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcTrackCol classid: 134182[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcHitCol classid: 134192[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcKalTrackCol classid: 134222[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcKalHelixSegCol classid: 134232[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcDedxCol classid: 134212[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcDedxHitCol classid: 134217[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEsTimeCol classid: 134682[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecTofTrackCol classid: 134402[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecBTofCalHitCol classid: 134422[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecETofCalHitCol classid: 134432[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEmcHitCol classid: 134292[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEmcClusterCol classid: 134302[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEmcShowerCol classid: 134282[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMucTrackCol classid: 134482[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/MucRecHitCol classid: 134492[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecExtTrackCol classid: 134582[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecZddChannelCol classid: 134882[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec classid: 4000[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecEvent classid: 4010[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecTrackCol classid: 135172[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecPrimaryVertex classid: 4020[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecVeeVertexCol classid: 135182[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecPi0Col classid: 135202[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecEtaToGGCol classid: 135212[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecDTagCol classid: 135192[m
+EventCnvSvc         DEBUG RootCnvSvc::initFiles[m
+EventCnvSvc          INFO Root Input files 1[m
+RootCnvSvc          DEBUG addInput  for Tree Event[m
+[93;1mEventCnvSvc       WARNING No specified digiRootOutputFile![m
+ServiceManager      DEBUG Initializing service EmcRecGeoSvc[m
+EmcRecGeoSvc         INFO EmcRecGeoSvc: Start of run initialisation[m
+EmcRecGeoSvc        DEBUG Service base class initialized successfully[m
+Construct Emc from GdmlFile /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/DetectorDescription/GdmlManagement/GdmlManagement-00-00-43/dat/Emc.gdml
+SAXProcessor type ROOT
+SAXProcessor requires type 2
+Top Volume not found 
+Find logicalEMC!
+gGeoManager success!
+ServiceManager      DEBUG Initializing service EmcCalibConstSvc[m
+EmcCalibConstSvc     INFO EmcCalibConstSvc::initialize()[m
+EmcCalibConstSvc    DEBUG Service base class initialized successfully[m
+CalibDataSvc        DEBUG Service base class initialized successfully[m
+DetectorPersist...  DEBUG Service base class initialized successfully[m
+IncidentSvc         DEBUG Adding [NewRun] listener 'CalibDataSvc' with priority 100[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/MdcCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/TofCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/DedxCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/EmcCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/MucCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/EsTimeCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/EstTofCal[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/MdcAlign[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/TofQElec[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/TofSim[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/DedxSim[m
+CalibDataSvc         INFO Unable to create Calib address with path /Calib/MdcDataConst[m
+EmcCalibConstSvc     INFO Retrieve IDataProviderSvc[m
+ServiceManager      DEBUG Initializing service RawDataProviderSvc[m
+IncidentSvc         DEBUG Adding [BeginEvent] listener 'RawDataProviderSvc' with priority 100[m
+[94;101;1mServiceManager      FATAL No Service factory for DetVerSvc available.[m
+RawDataProviderSvc  ERROR TofRawDataProvider Can NOT Retrieve DetVerSvc instance
+[97;101;1mServiceManager      ERROR Unable to initialize Service: RawDataProviderSvc[m
+ApplicationMgr       INFO Application Manager Terminated successfully[m

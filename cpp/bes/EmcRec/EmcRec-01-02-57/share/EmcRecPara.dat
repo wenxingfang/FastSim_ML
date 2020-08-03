@@ -1,0 +1,14 @@
+#ElectronicsNoiseLevel  EThresholdSeed  EThresholdCluster LogPosOffset
+0.0005                      0.006              0.01             4.
+#fMoliereRadius fLateralProfile
+3.8                   2.1
+#Energy correction
+0.9891  -0.0375 0.02213 -0.005322
+#Energy error       Theta error     Phi error
+0.1444  1.792 1.065 3.42e-3 9.65e-4 5.42e-3 7.95e-4
+#Hit number
+8.349 12.8  1.282
+#Correction of electronics bias
+-0.1285 6805  -2.418  9.513e-4  625.
+#Second moment cut
+18220.  0.3708  193.4 0.7

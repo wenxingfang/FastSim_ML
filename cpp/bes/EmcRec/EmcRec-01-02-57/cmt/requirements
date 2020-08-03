@@ -1,0 +1,30 @@
+package EmcRec
+author "Zhe Wang"
+
+branches cmt src EmcRec test doc
+
+use BesPolicy        BesPolicy-*
+use Identifier       Identifier-*             DetectorDescription
+use GaudiInterface   GaudiInterface-01-*      External
+use BesROOT          BesROOT-00-*             External
+use EmcRecEventModel EmcRecEventModel-01-*    Emc
+use EmcRecGeoSvc     EmcRecGeoSvc-01-*        Emc
+use EmcCalibConstSvc EmcCalibConstSvc-*       Emc
+use RawDataProviderSvc  RawDataProviderSvc-*  Event
+
+use MdcRawEvent  MdcRawEvent-* Mdc
+use TofRawEvent  TofRawEvent-* Tof
+use EmcRawEvent  EmcRawEvent-* Emc
+use EventModel   EventModel-*  Event
+use ReconEvent   ReconEvent-*  Event
+use McTruth      McTruth-*     Event 
+
+use RootHistCnv  v*
+
+use Rest      Rest-*      
+
+#macro_append cppflags " -DOnlineMode"
+
+#application  rec  EmcRecNeighbor.cxx ../test/main.cxx
+
+apply_pattern dual_use_library  files="*.cxx components/*.cxx"

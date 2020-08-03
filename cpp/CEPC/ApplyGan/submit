@@ -1,0 +1,15 @@
+getenv                  = True
+executable              = /junofs/users/wxfang/CEPC/CEPCOFF/ApplyGan/job.sh
+#arguments               = 10
+log                     = run_tf.sh.log
+error                   = run_tf.sh.err
+#requirements            = isUndefined(SubmitterUserResourcesInUse) || (SubmitterUserResourcesInUse <= 5)
+#Requirements = (Target.has_avx2=?= True)
+#Requirements = ( Target.has_avx2=?= True && Target.memory>3500 )
+Requirements = ( Target.has_avx2=?= True )
+#RequestMemory = 3500
+RequestMemory = 4000
++AcctGroup = "juno"
++AcctGroupUser = "wxfang"
++AccountingGroup = "juno.wxfang"
+queue

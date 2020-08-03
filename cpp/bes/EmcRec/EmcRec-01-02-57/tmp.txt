@@ -1,0 +1,126 @@
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/RootCnvSvc/Mc/EmcMcHitCnv.h:extern const CLID& CLID_EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/RootCnvSvc/Mc/EmcMcHitCnv.h:       return CLID_EmcMcHitCol; 
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/RootCnvSvc.cxx:    declareObject(Leaf(EventModel::MC::EmcMcHitCol, EmcMcHitCnv::classID(), "Event", "m_emcMcHitCol"));
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:    //declareObject(EventModel::MC::EmcMcHitCol, objType(), m_rootTreename, m_rootBranchname);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:    EmcMcHitCol* emcMcTdsCol = new EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:    EmcMcHitCol * emcMcHitCnvTds=dynamic_cast<EmcMcHitCol *> (obj);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:        log << MSG::ERROR << "Could not downcast to EmcMcHitCol" << endreq;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:    const TObjArray *m_emcMcHitCol = McEvt->getEmcMcHitCol();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:    McEvt->clearEmcMcHitCol(); //necessary in case there is I/O at the same time since array is static
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/src/Mc/EmcMcHitCnv.cxx:    EmcMcHitCol::const_iterator emcMcTds;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/x86_64-slc6-gcc46-opt/RootCnvSvc.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/x86_64-slc6-gcc46-opt/EmcMcHitCnv.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/x86_64-slc6-gcc46-opt/libRootCnvSvc.a matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/x86_64-slc6-gcc46-opt/RootCnvSvc_load.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootCnvSvc/RootCnvSvc-02-01-12/x86_64-slc6-gcc46-opt/libRootCnvSvc.so matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/TMcEvent.h:   const TObjArray* getEmcMcHitCol() const { return m_emcMcHitCol; }
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/TMcEvent.h:    void clearEmcMcHitCol() { m_emcMcHitCol->Clear(); }
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/TMcEvent.h:    static TObjArray *s_staticEmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/RootEventData_rootcint.cxx:      G__letint(result7, 85, (long) ((const TMcEvent*) G__getstructoffset())->getEmcMcHitCol());
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/RootEventData_rootcint.cxx:      ((TMcEvent*) G__getstructoffset())->clearEmcMcHitCol();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/RootEventData_rootcint.cxx:   G__memvar_setup((void*)0,85,0,0,G__get_linked_tagnum(&G__RootEventData_rootcintLN_TObjArray),-1,-2,4,"s_staticEmcMcHitCol=",0,(char*)NULL);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/RootEventData_rootcint.cxx:   G__memfunc_setup("getEmcMcHitCol",1352,G__RootEventData_rootcint_492_0_9, 85, G__get_linked_tagnum(&G__RootEventData_rootcintLN_TObjArray), -1, 0, 0, 1, 1, 9, "", (char*)NULL, (void*) NULL, 0);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/RootEventData/RootEventData_rootcint.cxx:   G__memfunc_setup("clearEmcMcHitCol",1551,G__RootEventData_rootcint_492_0_12, 121, -1, -1, 0, 0, 1, 1, 0, "", (char*)NULL, (void*) NULL, 0);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/src/TMcEvent.cxx:TObjArray *TMcEvent::s_staticEmcMcHitCol = 0;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/src/TMcEvent.cxx:    if (!s_staticEmcMcHitCol ){
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/src/TMcEvent.cxx:	    s_staticEmcMcHitCol = new TObjArray();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/src/TMcEvent.cxx:    m_emcMcHitCol = s_staticEmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/src/TMcEvent.cxx:    if(m_emcMcHitCol == s_staticEmcMcHitCol) s_staticEmcMcHitCol = 0;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/x86_64-slc6-gcc46-opt/RootEventData_rootcint.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/x86_64-slc6-gcc46-opt/TMcEvent.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/x86_64-slc6-gcc46-opt/libRootEventData.a matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RootEventData/RootEventData-00-03-80/x86_64-slc6-gcc46-opt/libRootEventData.so matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/ChangeLog:	* adding McParticleCol, MdcMcHitCol, TofMcHitCol, EmcMcHitCol and
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/EventModel/EventModel.h:            _EXTERN_ std::string EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/src/EventModel.cxx:    EventModel::MC::EmcMcHitCol           = EventModel::MC::Event   + "/EmcMcHitCol";
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/src/EventModel.cxx:const CLID& CLID_EmcMcHitCol        = CLID_EmcMcHit + CLID_ObjectVector;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/x86_64-slc6-gcc46-opt/EventModel.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/x86_64-slc6-gcc46-opt/libEventModel.a matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventModel/EventModel-01-05-33/x86_64-slc6-gcc46-opt/libEventModel.so matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventNavigator/EventNavigator-00-01-03/src/BesNavigatorInit.cxx:  SmartDataPtr<EmcMcHitCol> emcMcHits(eventSvc(),"/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventNavigator/EventNavigator-00-01-03/src/BesNavigatorInit.cxx:      for(EmcMcHitCol::const_iterator it = emcMcHits->begin(); it != emcMcHits->end(); it++)
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventNavigator/EventNavigator-00-01-03/src/BesNavigatorInit.cxx:      log << MSG::DEBUG << "Unable to retrieve EmcMcHitCol" << endreq;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventNavigator/EventNavigator-00-01-03/x86_64-slc6-gcc46-opt/BesNavigatorInit.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventNavigator/EventNavigator-00-01-03/x86_64-slc6-gcc46-opt/libEventNavigatorLib.a matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/EventNavigator/EventNavigator-00-01-03/x86_64-slc6-gcc46-opt/libEventNavigatorLib.so matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/McTruth/McTruth-00-02-19/McTruth/EmcMcHit.h:typedef ObjectVector<EmcMcHit> EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/RawDataCnv/RawDataEmcMcHitCnv.h://      the event on the TDS /Event/MC/EmcMcHitCol
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/RawDataCnv/EventManagement/EmcMcHitBuilder.h:using Event::EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/RawDataCnv/EventManagement/EmcMcHitBuilder.h:   virtual StatusCode pack(EmcMcHitCol* emcMcHitCol, WriteRawEvent*& re);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/RawDataCnv/EventManagement/EmcMcHitBuilder.h:  void makeEmcTruth(EmcMcHitCol::const_iterator& pEmcMcHit, EmcTruth_t& et);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/EventManagement/EmcMcHitBuilder.cxx:StatusCode EmcMcHitBuilder::pack(EmcMcHitCol* emcMcHitCol, WriteRawEvent*& re)
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/EventManagement/EmcMcHitBuilder.cxx:    cout << "EmcMcHitBuilder::pack cant get EmcMcHitCol" << endl;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/EventManagement/EmcMcHitBuilder.cxx:  EmcMcHitCol::const_iterator pEmcMcHit = emcMcHitCol->begin();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/EventManagement/EmcMcHitBuilder.cxx:(EmcMcHitCol::const_iterator& pEmcMcHit, EmcTruth_t& et)
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/PackedRawDataCnvSvc.cxx:  declareObject(IRawDataCnvSvc::Leaf(EventModel::MC::EmcMcHitCol, RawDataEmcMcHitCnv::classID(), "PASS", 0));
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:using Event::EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:extern const CLID& CLID_EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:  return CLID_EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:  //This converter will create an empty EmcMcHitCol on the TDS
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:  EmcMcHitCol *emcMcHitCol = new EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:  SmartDataPtr<EmcMcHitCol> mcHitCol(dataProvider(), EventModel::MC::EmcMcHitCol);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/src/RawDataEmcMcHitCnv.cxx:     //log << "no EmcMcHitCol found" << endreq;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/x86_64-slc6-gcc46-opt/PackedRawDataCnvSvc.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/x86_64-slc6-gcc46-opt/RawDataEmcMcHitCnv.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/x86_64-slc6-gcc46-opt/libRawDataCnv.a matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataCnv/RawDataCnv-00-04-37/x86_64-slc6-gcc46-opt/libRawDataCnv.so matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/EmcRec/EmcRec-01-02-57/src/EmcRec.cxx:        SmartDataPtr<EmcMcHitCol> emcMcHitCol(eventSvc(),"/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/EmcRec/EmcRec-01-02-57/src/EmcRec.cxx:        EmcMcHitCol::iterator iterMc;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/EmcRec/EmcRec-01-02-57/x86_64-slc6-gcc46-opt/EmcRec.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/EmcRec/EmcRec-01-02-57/x86_64-slc6-gcc46-opt/libEmcRecLib.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/EmcRec/EmcRec-01-02-57/x86_64-slc6-gcc46-opt/libEmcRecLib.a matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/MucRecAlg/MucRecAlg-00-03-08/src/MucRecTrkExt.cxx:  SmartDataPtr<Event::EmcMcHitCol> aEmcMcHitCol(eventSvc(),"/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/MucRecAlg/MucRecAlg-00-03-08/src/MucRecTrkExt.cxx:  if (!aEmcMcHitCol) {
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/MucRecAlg/MucRecAlg-00-03-08/src/MucRecTrkExt.cxx:  log << MSG::WARNING << "Could not find EmcMcHitCol" << endreq;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/MucRecAlg/MucRecAlg-00-03-08/src/MucRecTrkExt.cxx:  //log << MSG::DEBUG << "EmcMcHitCol contains " << aEmcMcHitCol->size() << " Hits " << endreq;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/TrkExtAlg/TrkExtAlg-00-00-64/src/TrkExtAlg.cxx:    SmartDataPtr<EmcMcHitCol> emcMcHitCol(eventSvc(),"/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Reconstruction/TrkExtAlg/TrkExtAlg-00-00-64/src/TrkExtAlg.cxx:    EmcMcHitCol::iterator iterEmcBegin = emcMcHitCol->begin();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:  Event::EmcMcHitCol*  aEmcMcHitCol = new Event::EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:          aEmcMcHitCol->push_back(emcMcHit);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:        Event::EmcMcHitCol*  aEmcMcHitCol = new Event::EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:          aEmcMcHitCol->push_back(emcMcHit);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:  StatusCode scEmc = m_evtSvc->registerObject("/Event/MC/EmcMcHitCol", aEmcMcHitCol);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:  /*SmartDataPtr<Event::EmcMcHitCol> aMcHitCol(m_evtSvc,"/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/src/BesMcTruthWriter.cc:  Event::EmcMcHitCol::iterator iMcHitCol;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/x86_64-slc6-gcc46-opt/BesMcTruthWriter.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/x86_64-slc6-gcc46-opt/libBesSim.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/BesSim/BesSim-00-01-24/x86_64-slc6-gcc46-opt/libBesSim.a matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/PrintMcInfo/PrintMcInfo.h:		void printHit(ofstream&,Event::MdcMcHitCol&,Event::TofMcHitCol&,Event::EmcMcHitCol&,Event::MucMcHitCol&,int&);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/src/McTruth.cxx:	SmartDataPtr<Event::EmcMcHitCol> emcMcHitCol(eventSvc(), "/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/src/McTruth.cxx:void PrintMcInfo::printHit(ofstream& os,Event::MdcMcHitCol& mdcCol,Event::TofMcHitCol& tofCol,Event::EmcMcHitCol& emcCol,Event::MucMcHitCol& mucCol,int& trk_Idx)
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/src/McTruth.cxx:	Event::EmcMcHitCol::const_iterator it_emc = emcCol.begin();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/src/McTruth.cxx:	vector<Event::EmcMcHitCol::const_iterator> vemc;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/x86_64-slc6-gcc46-opt/McTruth.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/x86_64-slc6-gcc46-opt/libPrintMcInfo.a matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/BOOST/PrintMcInfo/PrintMcInfo-00-00-03/x86_64-slc6-gcc46-opt/libPrintMcInfo.so matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/McTestAlg/McTestAlg-00-00-10/src/McTestAlg.cxx:  SmartDataPtr<Event::EmcMcHitCol> aMcHitCol(m_evtSvc,"/Event/MC/EmcMcHitCol");
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/McTestAlg/McTestAlg-00-00-10/src/McTestAlg.cxx:    Event::EmcMcHitCol::iterator iMcHitCol;
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/McTestAlg/McTestAlg-00-00-10/x86_64-slc6-gcc46-opt/McTestAlg.o matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/McTestAlg/McTestAlg-00-00-10/x86_64-slc6-gcc46-opt/libMcTestAlg.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Simulation/McTestAlg/McTestAlg-00-00-10/x86_64-slc6-gcc46-opt/libMcTestAlg.a matches
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EventModel/EventModel/EventModel.h:            _EXTERN_ std::string EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/McTruth/McTruth/EmcMcHit.h:typedef ObjectVector<EmcMcHit> EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RawDataCnv/RawDataCnv/RawDataEmcMcHitCnv.h://      the event on the TDS /Event/MC/EmcMcHitCol
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RawDataCnv/RawDataCnv/EventManagement/EmcMcHitBuilder.h:using Event::EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RawDataCnv/RawDataCnv/EventManagement/EmcMcHitBuilder.h:   virtual StatusCode pack(EmcMcHitCol* emcMcHitCol, WriteRawEvent*& re);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RawDataCnv/RawDataCnv/EventManagement/EmcMcHitBuilder.h:  void makeEmcTruth(EmcMcHitCol::const_iterator& pEmcMcHit, EmcTruth_t& et);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/TMcEvent.h:   const TObjArray* getEmcMcHitCol() const { return m_emcMcHitCol; }
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/TMcEvent.h:    void clearEmcMcHitCol() { m_emcMcHitCol->Clear(); }
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/TMcEvent.h:    static TObjArray *s_staticEmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/RootEventData_rootcint.cxx:      G__letint(result7, 85, (long) ((const TMcEvent*) G__getstructoffset())->getEmcMcHitCol());
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/RootEventData_rootcint.cxx:      ((TMcEvent*) G__getstructoffset())->clearEmcMcHitCol();
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/RootEventData_rootcint.cxx:   G__memvar_setup((void*)0,85,0,0,G__get_linked_tagnum(&G__RootEventData_rootcintLN_TObjArray),-1,-2,4,"s_staticEmcMcHitCol=",0,(char*)NULL);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/RootEventData_rootcint.cxx:   G__memfunc_setup("getEmcMcHitCol",1352,G__RootEventData_rootcint_492_0_9, 85, G__get_linked_tagnum(&G__RootEventData_rootcintLN_TObjArray), -1, 0, 0, 1, 1, 9, "", (char*)NULL, (void*) NULL, 0);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootEventData/RootEventData/RootEventData_rootcint.cxx:   G__memfunc_setup("clearEmcMcHitCol",1551,G__RootEventData_rootcint_492_0_12, 121, -1, -1, 0, 0, 1, 1, 0, "", (char*)NULL, (void*) NULL, 0);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/PrintMcInfo/PrintMcInfo/PrintMcInfo.h:		void printHit(ofstream&,Event::MdcMcHitCol&,Event::TofMcHitCol&,Event::EmcMcHitCol&,Event::MucMcHitCol&,int&);
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootCnvSvc/RootCnvSvc/Mc/EmcMcHitCnv.h:extern const CLID& CLID_EmcMcHitCol;
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/RootCnvSvc/RootCnvSvc/Mc/EmcMcHitCnv.h:       return CLID_EmcMcHitCol; 
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libEventModel.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libMcTestAlg.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libRawDataCnv.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libEventNavigatorLib.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libRootEventData.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libBesSim.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libPrintMcInfo.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libEmcRecLib.so matches
+Binary file /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/x86_64-slc6-gcc46-opt/lib/libRootCnvSvc.so matches

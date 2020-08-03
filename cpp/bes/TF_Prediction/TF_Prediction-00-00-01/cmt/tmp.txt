@@ -1,0 +1,1597 @@
+
+**************************************************
+               BOSS version: 7.0.3
+************** BESIII Collaboration **************
+
+the jobOptions file is : ../share/TF_Prediction.txt
+JobOptionsSvc        INFO # =======> /junofs/users/wxfang/FastSim/bes3/workarea/BesExamples/TF_Prediction/TF_Prediction-00-00-01/cmt/../share/TF_Prediction.txt
+JobOptionsSvc        INFO # (12,1): ApplicationMgr.DLLs += ["RootCnvSvc"]
+JobOptionsSvc        INFO # (13,1): ApplicationMgr.ExtSvc += ["EvtPersistencySvc/EventPersistencySvc"]
+JobOptionsSvc        INFO # (14,1): ApplicationMgr.ExtSvc += ["RootEvtSelector/EventSelector", "RootCnvSvc/EventCnvSvc"]
+JobOptionsSvc        INFO # (15,1): EventPersistencySvc.CnvServices += ["EventCnvSvc"]
+JobOptionsSvc        INFO # (16,1): ApplicationMgr.DLLs += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (17,1): ApplicationMgr.ExtSvc += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (20,1): ApplicationMgr.DLLs += ["TF_Prediction"]
+JobOptionsSvc        INFO # (21,1): ApplicationMgr.TopAlg += ["Prediction"]
+JobOptionsSvc        INFO # (27,1): MessageSvc.OutputLevel = 5
+JobOptionsSvc        INFO # (28,1): MessageSvc.useColors = 1
+JobOptionsSvc        INFO # (42,1): Prediction.MyInt = 42
+JobOptionsSvc        INFO # (43,1): Prediction.MyBool = 1
+JobOptionsSvc        INFO # (44,1): Prediction.MyDouble = 3.14159
+JobOptionsSvc        INFO # (45,1): Prediction.MyStringVec = ["Welcome", "to", "Boss", "Framework", "Tutorial"]
+JobOptionsSvc        INFO # (47,1): Prediction.em_Low_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_Low.pb"
+JobOptionsSvc        INFO # (48,1): Prediction.em_High_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_High.pb"
+JobOptionsSvc        INFO # (49,1): Prediction.ep_Low_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_Low.pb"
+JobOptionsSvc        INFO # (50,1): Prediction.ep_High_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_High.pb"
+JobOptionsSvc        INFO # (51,1): Prediction.input_op_name = "gen_input"
+JobOptionsSvc        INFO # (52,1): Prediction.output_op_name = "re_lu_5/Relu"
+JobOptionsSvc        INFO # (53,1): Prediction.ElectronicsNoiseLevel = 0.0005
+JobOptionsSvc        INFO # (55,1): EventCnvSvc.digiRootInputFile = ["/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec"]
+JobOptionsSvc        INFO # (58,1): ApplicationMgr.EvtMax = 100
+JobOptionsSvc        INFO Job options successfully read in from ../share/TF_Prediction.txt
+ApplicationMgr    SUCCESS 
+====================================================================================================================================
+                                                   Welcome to ApplicationMgr (GaudiCoreSvc v1r5)
+                                          running on lxslc606.ihep.ac.cn on Mon Oct 21 14:15:58 2019
+====================================================================================================================================[m
+
+[1mRooFit v3.56 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+ApplicationMgr       INFO Successfully loaded modules : RootCnvSvc, EmcRecGeoSvc, TF_Prediction[m
+TagFilterSvc, number of tag files: 0
+Construct Emc from GdmlFile /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/DetectorDescription/GdmlManagement/GdmlManagement-00-00-43/dat/Emc.gdml
+SAXProcessor type ROOT
+SAXProcessor requires type 2
+Top Volume not found 
+Find logicalEMC!
+gGeoManager success!
+Hello from TensorFlow C library version 1.14.0
+Successfully imported graph
+ApplicationMgr       INFO Application Manager Initialized successfully[m
+ApplicationMgr       INFO Application Manager Started successfully[m
+for event 1
+
+**************************************************
+Print JobInfo for data file: /junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec
+          BOSS version: 7.0.3
+**************************************************
+
+
+**************************************************
+          JobOptions for this data file: 
+
+#include "$OFFLINEEVENTLOOPMGRROOT/share/OfflineEventLoopMgr_Option.txt"
+ApplicationMgr.DLLs += {"Babayaga"};
+ApplicationMgr.TopAlg += {"Babayaga"};
+BesRndmGenSvc.RndmSeed = 20100;
+#include "$BESSIMROOT/share/G4Svc_BesSim.txt"
+#include "$CALIBSVCROOT/share/calibConfig_sim.txt"
+#include "$ROOTIOROOT/share/jobOptions_Digi2Root.txt"
+RootCnvSvc.digiRootOutputFile = "/besfs/groups/cal/emc/liucx/BhabhaCalib/mcdata/bb703/bb1776_703_2017_100.rtraw";
+MessageSvc.OutputLevel  = 6;
+ApplicationMgr.EvtMax = 10000;
+
+          end of the jobOptions file 
+**************************************************
+
+#include "$ROOTIOROOT/share/jobOptions_ReadRoot.txt"
+#include "$OFFLINEEVENTLOOPMGRROOT/share/OfflineEventLoopMgr_Option.txt"
+#include "$BESEVENTMIXERROOT/share/jobOptions_EventMixer_rec.txt"
+#include "$CALIBSVCROOT/share/job-CalibData.txt"
+#include "$MAGNETICFIELDROOT/share/MagneticField.txt"
+#include "$ESTIMEALGROOT/share/job_EsTimeAlg.txt"
+#include "$MDCHOUGHFINDERROOT/share/jobOptions_MdcPatTsfHoughRec.txt"
+#include "$KALFITALGROOT/share/job_kalfit_numf_data.txt"
+#include "$MDCDEDXALGROOT/share/job_dedx_all.txt"
+#include "$TRKEXTALGROOT/share/TrkExtAlgOption.txt"
+#include "$TOFRECROOT/share/jobOptions_TofRec.txt"
+#include "$TOFENERGYRECROOT/share/TofEnergyRecOptions_MC.txt"
+#include "$EMCRECROOT/share/EmcRecOptions.txt"
+#include "$MUCRECALGROOT/share/jobOptions_MucRec.txt"
+#include "$EVENTASSEMBLYROOT/share/EventAssembly.txt"
+#include "$PRIMARYVERTEXALGROOT/share/jobOptions_kalman.txt"
+#include "$VEEVERTEXALGROOT/share/jobOptions_veeVertex.txt"
+#include "$HLTMAKERALGROOT/share/jobOptions_HltMakerAlg.txt"
+#include "$EVENTNAVIGATORROOT/share/EventNavigator.txt"
+#include "/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/run/jobOptions_Rec2Root.txt"
+#include "$CALIBSVCROOT/share/calibConfig_rec_mc.txt"
+BesRndmGenSvc.RndmSeed = 100;
+MessageSvc.OutputLevel = 2; 
+EventCnvSvc.digiRootInputFile = {"/besfs/groups/cal/emc/liucx/BhabhaCalib/mcdata/bb703/bb1776_703_2017_100.rtraw"};
+EventCnvSvc.digiRootOutputFile ="/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec";
+ApplicationMgr.EvtMax = -1;
+
+          end of the jobOptions file 
+**************************************************
+
+emcCls=0x55fecc0
+for track 0
+find center
+i =0,for em, mom= 1.80047, M_dtheta=2.00522, M_dphi=-6.97138, P_dz=-1.40375,P_dphi=-1.27638,e_ext_z=-120.541
+TF input mom= 1.80047, M_dtheta=2.00522, M_dphi=-0.697138, P_dz=-1.40375,P_dphi=-1.27638
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 6.74025e-43
+i=62, Output values info: 9.44539e+21
+i=63, Output values info: 9.44539e+21
+i=64, Output values info: 7.93695e-41
+i=65, Output values info: 1.4013e-45
+i=66, Output values info: 0
+i=67, Output values info: 4.62428e-44
+i=68, Output values info: 9.55037e+21
+i=69, Output values info: 9.44904e+21
+i=70, Output values info: 1.56945e-43
+i=71, Output values info: 7.28675e-44
+i=72, Output values info: 9.44846e+21
+i=73, Output values info: 3.0268e-43
+i=74, Output values info: 1.56945e-43
+i=75, Output values info: 5.04467e-44
+i=76, Output values info: 9.44897e+21
+i=77, Output values info: 9.44487e+21
+i=78, Output values info: 9.55349e+21
+i=79, Output values info: 1.80768e-43
+i=80, Output values info: 9.44487e+21
+i=81, Output values info: 9.55037e+21
+i=82, Output values info: 4.48416e-44
+i=83, Output values info: 5.04467e-44
+i=84, Output values info: 9.55037e+21
+i=85, Output values info: 9.44487e+21
+i=86, Output values info: 4.48416e-44
+i=87, Output values info: 9.10844e-44
+i=88, Output values info: 9.44487e+21
+i=89, Output values info: 9.44487e+21
+i=90, Output values info: 4.48416e-44
+i=91, Output values info: 5.04467e-44
+i=92, Output values info: 9.44882e+21
+i=93, Output values info: 9.44487e+21
+i=94, Output values info: 3.81153e-43
+i=95, Output values info: 5.04467e-44
+i=96, Output values info: 9.449e+21
+i=97, Output values info: 9.53175e+21
+i=98, Output values info: 4.25995e-43
+i=99, Output values info: 5.04467e-44
+i=100, Output values info: 9.54671e+21
+i=101, Output values info: 9.54675e+21
+i=102, Output values info: 9.54675e+21
+i=103, Output values info: 2.03188e-43
+i=104, Output values info: 9.44501e+21
+i=105, Output values info: 9.44501e+21
+i=106, Output values info: 4.48416e-44
+i=107, Output values info: 7.28675e-44
+i=108, Output values info: 9.44898e+21
+i=109, Output values info: 3.04082e-43
+i=110, Output values info: 8.14098e-41
+i=111, Output values info: 1.4013e-45
+i=112, Output values info: 1.27798e-42
+i=113, Output values info: 9.52883e-44
+i=114, Output values info: 9.53888e+21
+i=115, Output values info: 6.86636e-44
+i=116, Output values info: 1.85196e-41
+i=117, Output values info: 1.4013e-45
+i=118, Output values info: 8.47141e-41
+i=119, Output values info: 5.60519e-45
+i=120, Output values info: 6.72623e-43
+end predict
+vec id size=121, vec_e size=121
+emcCls=0x55fd700
+for track 1
+find center
+vec id size=121, vec_e size=121
+Done Prediction
+for event 2
+Done Prediction
+for event 3
+emcCls=0x7fa64c086330
+emcCls=0x7fa64c09a470
+Done Prediction
+for event 4
+emcCls=0x7fa64c06d190
+emcCls=0x7fa64c0581d0
+Done Prediction
+for event 5
+emcCls=0x7fa64c0b5110
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0c7e30
+for track 1
+find center
+i =1,for em, mom= 1.74714, M_dtheta=1.57393, M_dphi=-5.50491, P_dz=-0.159778,P_dphi=-0.176381,e_ext_z=-103.666
+TF input mom= 1.74714, M_dtheta=1.57393, M_dphi=-0.550491, P_dz=-0.159778,P_dphi=-0.176381
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 0
+i=62, Output values info: 0
+i=63, Output values info: 0
+i=64, Output values info: 0
+i=65, Output values info: 9.86654e-42
+i=66, Output values info: 9.55037e+21
+i=67, Output values info: 9.44866e+21
+i=68, Output values info: 0
+i=69, Output values info: 0
+i=70, Output values info: 9.53535e+21
+i=71, Output values info: 9.44487e+21
+i=72, Output values info: 0
+i=73, Output values info: 9.10844e-44
+i=74, Output values info: 9.52857e+21
+i=75, Output values info: 9.44487e+21
+i=76, Output values info: 4.48416e-44
+i=77, Output values info: 5.04467e-44
+i=78, Output values info: 9.45518e+21
+i=79, Output values info: 9.44487e+21
+i=80, Output values info: 1.79366e-43
+i=81, Output values info: 5.04467e-44
+i=82, Output values info: 9.45536e+21
+i=83, Output values info: 9.44753e+21
+i=84, Output values info: 2.24208e-43
+i=85, Output values info: 5.04467e-44
+i=86, Output values info: 9.44866e+21
+i=87, Output values info: 9.4487e+21
+i=88, Output values info: 9.4487e+21
+i=89, Output values info: 9.59749e-42
+i=90, Output values info: 9.44672e+21
+i=91, Output values info: 9.44672e+21
+i=92, Output values info: 9.4554e+21
+i=93, Output values info: 9.4554e+21
+i=94, Output values info: 0
+i=95, Output values info: 0
+i=96, Output values info: 0
+i=97, Output values info: 6.63201
+i=98, Output values info: 0
+i=99, Output values info: 0
+i=100, Output values info: 0
+i=101, Output values info: 4.05129
+i=102, Output values info: 0
+i=103, Output values info: 0
+i=104, Output values info: 0
+i=105, Output values info: 0
+i=106, Output values info: 0
+i=107, Output values info: 0
+i=108, Output values info: 0
+i=109, Output values info: 0
+i=110, Output values info: 0
+i=111, Output values info: 0
+i=112, Output values info: 0
+i=113, Output values info: 0
+i=114, Output values info: 0
+i=115, Output values info: 0.635713
+i=116, Output values info: 3.02061
+i=117, Output values info: 0.914832
+i=118, Output values info: 0
+i=119, Output values info: 0
+i=120, Output values info: 0
+end predict
+vec id size=121, vec_e size=121
+my hit energy=0.00469844
+my hit energy=0.0292782
+my hit energy=0.0253313
+my hit energy=0.00269194
+my hit energy=8.20277e-06
+my hit energy=0.00244856
+my hit energy=0.00114278
+my hit energy=0.00866763
+my hit energy=0
+my hit energy=0.00141396
+my hit energy=0.0134309
+my hit energy=0.0126716
+my hit energy=0.0014862
+Done Prediction
+for event 6
+Done Prediction
+for event 7
+Done Prediction
+for event 8
+Done Prediction
+for event 9
+emcCls=0x7fa64c04e9a0
+emcCls=0x7fa64c089df0
+Done Prediction
+for event 10
+emcCls=0x7fa64c03ff00
+emcCls=0x7fa64c05d860
+Done Prediction
+for event 11
+emcCls=0x7fa64c022900
+emcCls=0x7fa64c0b56d0
+Done Prediction
+for event 12
+emcCls=0x7fa64c052480
+emcCls=0x7fa64c0868c0
+Done Prediction
+for event 13
+emcCls=0x7fa64c086e60
+emcCls=0x7fa64c03f360
+Done Prediction
+for event 14
+Done Prediction
+for event 15
+emcCls=0x7fa64c0ccfa0
+Done Prediction
+for event 16
+emcCls=0x7fa64c0aea30
+emcCls=0x7fa64c0ac700
+Done Prediction
+for event 17
+emcCls=0x7fa64c0d4f80
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0d6550
+for track 1
+find center
+i =1,for em, mom= 1.77404, M_dtheta=0.767085, M_dphi=-7.15629, P_dz=0.917187,P_dphi=-0.431,e_ext_z=-135.248
+Done Prediction
+for event 18
+Done Prediction
+for event 19
+emcCls=0x7fa64c09d650
+Done Prediction
+for event 20
+Done Prediction
+for event 21
+Done Prediction
+for event 22
+emcCls=0x7fa64c0b6800
+emcCls=0x7fa64c0babd0
+Done Prediction
+for event 23
+Done Prediction
+for event 24
+Done Prediction
+for event 25
+emcCls=0x7fa64c091e90
+emcCls=0x7fa64c0636f0
+Done Prediction
+for event 26
+emcCls=0x7fa64c08a9c0
+emcCls=0x7fa64c0d6ca0
+Done Prediction
+for event 27
+Done Prediction
+for event 28
+emcCls=0x7fa64c0762d0
+emcCls=0x7fa64c066f30
+Done Prediction
+for event 29
+Done Prediction
+for event 30
+emcCls=0x7fa64c09c920
+emcCls=0x7fa64c0a2000
+Done Prediction
+for event 31
+emcCls=0x7fa64c0bc540
+emcCls=0x7fa64c0b6e30
+Done Prediction
+for event 32
+emcCls=0x7fa64c0be0d0
+Done Prediction
+for event 33
+Done Prediction
+for event 34
+Done Prediction
+for event 35
+emcCls=0x7fa64c055480
+emcCls=0x7fa64c0481e0
+Done Prediction
+for event 36
+Done Prediction
+for event 37
+emcCls=0x7fa64c082d60
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c04fb80
+for track 1
+find center
+i =1,for em, mom= 1.80032, M_dtheta=0.236465, M_dphi=-7.75809, P_dz=1.37199,P_dphi=-1.44444,e_ext_z=-134.793
+Done Prediction
+for event 38
+Done Prediction
+for event 39
+emcCls=0x7fa64c047c10
+for track 0
+find center
+i =0,for em, mom= 1.74212, M_dtheta=3.09011, M_dphi=-2.51427, P_dz=0.501547,P_dphi=1.06218,e_ext_z=33.5696
+emcCls=0x7fa64c048b60
+for track 1
+find center
+vec id size=121, vec_e size=121
+Done Prediction
+for event 40
+Done Prediction
+for event 41
+Done Prediction
+for event 42
+Done Prediction
+for event 43
+Done Prediction
+for event 44
+emcCls=0x7fa64c0517c0
+emcCls=0x7fa64c081c60
+Done Prediction
+for event 45
+Done Prediction
+for event 46
+emcCls=0x7fa64c0769d0
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c05b2e0
+Done Prediction
+for event 47
+Done Prediction
+for event 48
+Done Prediction
+for event 49
+Done Prediction
+for event 50
+emcCls=0x7fa64c0d0280
+emcCls=0x7fa64c077590
+Done Prediction
+for event 51
+Done Prediction
+for event 52
+Done Prediction
+for event 53
+Done Prediction
+for event 54
+emcCls=0x7fa64c0637e0
+for track 0
+find center
+i =0,for em, mom= 1.72295, M_dtheta=2.71494, M_dphi=-3.48573, P_dz=-1.34366,P_dphi=0.139842,e_ext_z=-35.4232
+TF input mom= 1.72295, M_dtheta=2.71494, M_dphi=-0.348573, P_dz=-1.34366,P_dphi=0.139842
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 1.63952e-43
+i=62, Output values info: 0
+i=63, Output values info: 9.55585e+21
+i=64, Output values info: 0
+i=65, Output values info: 0
+i=66, Output values info: -8.26074
+i=67, Output values info: -2.7641
+i=68, Output values info: 9.6207e+21
+i=69, Output values info: 0
+i=70, Output values info: 0
+i=71, Output values info: -7.73828
+i=72, Output values info: 1.60879
+i=73, Output values info: -3.87261
+i=74, Output values info: 1.56945e-43
+i=75, Output values info: 4.70976e-42
+i=76, Output values info: 9.4466e+21
+i=77, Output values info: 9.4466e+21
+i=78, Output values info: 9.4508e+21
+i=79, Output values info: 9.4508e+21
+i=80, Output values info: 9.44487e+21
+i=81, Output values info: 9.55037e+21
+i=82, Output values info: 4.48416e-44
+i=83, Output values info: 5.04467e-44
+i=84, Output values info: 9.55037e+21
+i=85, Output values info: 9.44487e+21
+i=86, Output values info: 1.34525e-43
+i=87, Output values info: 5.04467e-44
+i=88, Output values info: 9.53934e+21
+i=89, Output values info: 9.53937e+21
+i=90, Output values info: 1.79366e-43
+i=91, Output values info: 5.04467e-44
+i=92, Output values info: 0
+i=93, Output values info: 9.53942e+21
+i=94, Output values info: 9.53942e+21
+i=95, Output values info: 4.48556e-42
+i=96, Output values info: 9.4466e+21
+i=97, Output values info: 9.4466e+21
+i=98, Output values info: 9.45098e+21
+i=99, Output values info: 9.45098e+21
+i=100, Output values info: 2.58116
+i=101, Output values info: 1.34188
+i=102, Output values info: -7.19166
+i=103, Output values info: 3.18977
+i=104, Output values info: -4.53998
+i=105, Output values info: -4.86311
+i=106, Output values info: -4.36688
+i=107, Output values info: -6.67366
+i=108, Output values info: -1.50995
+i=109, Output values info: -5.9648
+i=110, Output values info: -2.19775
+i=111, Output values info: -5.30506
+i=112, Output values info: 1.79401
+i=113, Output values info: -6.95445
+i=114, Output values info: 7.32526
+i=115, Output values info: -3.86379
+i=116, Output values info: -5.74176
+i=117, Output values info: 0.0213079
+i=118, Output values info: -4.55656
+i=119, Output values info: 1.90024
+i=120, Output values info: -6.24578
+end predict
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c063700
+for track 1
+find center
+vec id size=121, vec_e size=121
+my hit energy=0.00180459
+my hit energy=0
+my hit energy=0.0028145
+my hit energy=0.001392
+my hit energy=0.00368835
+my hit energy=-0.0036902
+my hit energy=0.00538988
+my hit energy=-0.00423221
+my hit energy=0.00425008
+my hit energy=0
+my hit energy=0.00490476
+my hit energy=0
+my hit energy=0.00332438
+my hit energy=4.57916e-44
+my hit energy=0.00686501
+my hit energy=0.00272663
+Done Prediction
+for event 55
+emcCls=0x7fa64c0588e0
+Done Prediction
+for event 56
+emcCls=0x7fa64c04e8c0
+emcCls=0x7fa64c058d20
+Done Prediction
+for event 57
+emcCls=0x7fa64c0dbe40
+for track 0
+find center
+i =0,for em, mom= 1.74572, M_dtheta=1.23021, M_dphi=-5.8019, P_dz=0.144528,P_dphi=-0.267007,e_ext_z=-103.362
+TF input mom= 1.74572, M_dtheta=1.23021, M_dphi=-0.58019, P_dz=0.144528,P_dphi=-0.267007
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 3.84244
+i=62, Output values info: -5.88185
+i=63, Output values info: -3.54834
+i=64, Output values info: -3.20674
+i=65, Output values info: 4.01472e-42
+i=66, Output values info: 9.53535e+21
+i=67, Output values info: 9.44866e+21
+i=68, Output values info: 0
+i=69, Output values info: 0
+i=70, Output values info: 9.55037e+21
+i=71, Output values info: 9.44487e+21
+i=72, Output values info: 8.96831e-44
+i=73, Output values info: 5.04467e-44
+i=74, Output values info: 9.44866e+21
+i=75, Output values info: 9.44869e+21
+i=76, Output values info: 1.34525e-43
+i=77, Output values info: 5.04467e-44
+i=78, Output values info: 0
+i=79, Output values info: 9.44873e+21
+i=80, Output values info: 9.44873e+21
+i=81, Output values info: 3.83535e-42
+i=82, Output values info: 9.44647e+21
+i=83, Output values info: 9.44647e+21
+i=84, Output values info: 9.45151e+21
+i=85, Output values info: 9.45151e+21
+i=86, Output values info: -2.46972
+i=87, Output values info: 0.494734
+i=88, Output values info: -3.78889
+i=89, Output values info: 4.00308
+i=90, Output values info: 1.27182
+i=91, Output values info: 2.13381
+i=92, Output values info: -5.77894
+i=93, Output values info: 2.4736
+i=94, Output values info: 2.0829
+i=95, Output values info: -3.99554
+i=96, Output values info: -3.03274
+i=97, Output values info: -1.99011
+i=98, Output values info: -5.47103
+i=99, Output values info: -1.88368
+i=100, Output values info: 2.58116
+i=101, Output values info: 1.34188
+i=102, Output values info: -7.19166
+i=103, Output values info: 3.18977
+i=104, Output values info: -4.53998
+i=105, Output values info: -4.86311
+i=106, Output values info: -4.36688
+i=107, Output values info: -6.67366
+i=108, Output values info: -1.50995
+i=109, Output values info: -5.9648
+i=110, Output values info: -2.19775
+i=111, Output values info: -5.30506
+i=112, Output values info: 1.79401
+i=113, Output values info: -6.95445
+i=114, Output values info: 7.32526
+i=115, Output values info: -3.86379
+i=116, Output values info: -5.74176
+i=117, Output values info: 0.0213079
+i=118, Output values info: -4.55656
+i=119, Output values info: 1.90024
+i=120, Output values info: -6.24578
+end predict
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0dac70
+for track 1
+find center
+vec id size=121, vec_e size=121
+my hit energy=0.00180459
+my hit energy=0.000586288
+my hit energy=0
+my hit energy=0.0028145
+my hit energy=0.001392
+my hit energy=0.000622637
+my hit energy=4.57916e-44
+my hit energy=0.00368835
+my hit energy=0
+my hit energy=0.00163659
+my hit energy=0
+my hit energy=0.000635162
+my hit energy=0
+my hit energy=0.00399583
+my hit energy=0
+my hit energy=0.00538988
+my hit energy=4.57916e-44
+my hit energy=0.00425008
+my hit energy=4.57916e-44
+my hit energy=0.00490476
+my hit energy=0.00142616
+my hit energy=0
+my hit energy=0.00332438
+my hit energy=0
+my hit energy=0.00686501
+my hit energy=0.012685
+Done Prediction
+for event 58
+Done Prediction
+for event 59
+emcCls=0x7fa64c0a0ce0
+for track 0
+find center
+i =0,for em, mom= 1.79303, M_dtheta=0.554039, M_dphi=-3.5892, P_dz=1.51709,P_dphi=1.44182,e_ext_z=-94.6178
+TF input mom= 1.79303, M_dtheta=0.554039, M_dphi=-0.35892, P_dz=1.51709,P_dphi=1.44182
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 1.12244e-42
+i=62, Output values info: 9.53535e+21
+i=63, Output values info: 9.45136e+21
+i=64, Output values info: -3.20674
+i=65, Output values info: 1.0776e-42
+i=66, Output values info: 9.53535e+21
+i=67, Output values info: 9.44487e+21
+i=68, Output values info: 4.48416e-44
+i=69, Output values info: 5.04467e-44
+i=70, Output values info: 9.44871e+21
+i=71, Output values info: 9.44487e+21
+i=72, Output values info: 1.60879
+i=73, Output values info: 9.10844e-44
+i=74, Output values info: 9.5394e+21
+i=75, Output values info: 9.55037e+21
+i=76, Output values info: 4.48416e-44
+i=77, Output values info: 5.04467e-44
+i=78, Output values info: 9.55037e+21
+i=79, Output values info: 9.44487e+21
+i=80, Output values info: 1.79366e-43
+i=81, Output values info: 5.04467e-44
+i=82, Output values info: 9.45219e+21
+i=83, Output values info: 9.45139e+21
+i=84, Output values info: 2.24208e-43
+i=85, Output values info: 5.04467e-44
+i=86, Output values info: 9.45197e+21
+i=87, Output values info: 9.45201e+21
+i=88, Output values info: 9.45201e+21
+i=89, Output values info: 8.08549e-43
+i=90, Output values info: 9.4455e+21
+i=91, Output values info: 9.4455e+21
+i=92, Output values info: -5.77894
+i=93, Output values info: 2.4736
+i=94, Output values info: 2.0829
+i=95, Output values info: -3.99554
+i=96, Output values info: -3.03274
+i=97, Output values info: -1.99011
+i=98, Output values info: -5.47103
+i=99, Output values info: -1.88368
+i=100, Output values info: 2.58116
+i=101, Output values info: 1.34188
+i=102, Output values info: -7.19166
+i=103, Output values info: 3.18977
+i=104, Output values info: -4.53998
+i=105, Output values info: -4.86311
+i=106, Output values info: -4.36688
+i=107, Output values info: -6.67366
+i=108, Output values info: -1.50995
+i=109, Output values info: -5.9648
+i=110, Output values info: -2.19775
+i=111, Output values info: -5.30506
+i=112, Output values info: 1.79401
+i=113, Output values info: -6.95445
+i=114, Output values info: 7.32526
+i=115, Output values info: -3.86379
+i=116, Output values info: -5.74176
+i=117, Output values info: 0.0213079
+i=118, Output values info: -4.55656
+i=119, Output values info: 1.90024
+i=120, Output values info: -6.24578
+end predict
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0a0c00
+for track 1
+find center
+vec id size=121, vec_e size=121
+my hit energy=0.00180459
+my hit energy=0
+my hit energy=0.0028145
+my hit energy=0.001392
+my hit energy=0.000622637
+my hit energy=4.57916e-44
+my hit energy=0.00368835
+my hit energy=0
+my hit energy=0.000635162
+my hit energy=-0.0036902
+my hit energy=0.00538988
+my hit energy=0
+my hit energy=0.00425008
+my hit energy=4.57916e-44
+my hit energy=0.00490476
+my hit energy=0
+my hit energy=0.00332438
+my hit energy=0.00686501
+Done Prediction
+for event 60
+Done Prediction
+for event 61
+emcCls=0x7fa64c07b2a0
+emcCls=0x7fa64c0d2080
+Done Prediction
+for event 62
+emcCls=0x7fa64c050f30
+for track 0
+find center
+i =0,for em, mom= 1.75423, M_dtheta=1.02293, M_dphi=-5.79425, P_dz=1.29519,P_dphi=-0.333817,e_ext_z=-102.211
+TF input mom= 1.75423, M_dtheta=1.02293, M_dphi=-0.579425, P_dz=1.29519,P_dphi=-0.333817
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 3.84244
+i=62, Output values info: -5.88185
+i=63, Output values info: -3.54834
+i=64, Output values info: -3.20674
+i=65, Output values info: 2.40042e-42
+i=66, Output values info: 9.44758e+21
+i=67, Output values info: 9.52854e+21
+i=68, Output values info: 0
+i=69, Output values info: 0
+i=70, Output values info: 9.53535e+21
+i=71, Output values info: 9.44487e+21
+i=72, Output values info: 8.96831e-44
+i=73, Output values info: 5.04467e-44
+i=74, Output values info: 9.45277e+21
+i=75, Output values info: 9.53175e+21
+i=76, Output values info: 1.34525e-43
+i=77, Output values info: 5.04467e-44
+i=78, Output values info: 9.52854e+21
+i=79, Output values info: 9.52857e+21
+i=80, Output values info: 9.52857e+21
+i=81, Output values info: 2.22106e-42
+i=82, Output values info: 9.44615e+21
+i=83, Output values info: 9.44615e+21
+i=84, Output values info: 9.4528e+21
+i=85, Output values info: 9.4528e+21
+i=86, Output values info: -2.46972
+i=87, Output values info: 0.494734
+i=88, Output values info: -3.78889
+i=89, Output values info: 4.00308
+i=90, Output values info: 1.27182
+i=91, Output values info: 2.13381
+i=92, Output values info: -5.77894
+i=93, Output values info: 2.4736
+i=94, Output values info: 2.0829
+i=95, Output values info: -3.99554
+i=96, Output values info: -3.03274
+i=97, Output values info: -1.99011
+i=98, Output values info: -5.47103
+i=99, Output values info: -1.88368
+i=100, Output values info: 2.58116
+i=101, Output values info: 1.34188
+i=102, Output values info: -7.19166
+i=103, Output values info: 3.18977
+i=104, Output values info: -4.53998
+i=105, Output values info: -4.86311
+i=106, Output values info: -4.36688
+i=107, Output values info: -6.67366
+i=108, Output values info: -1.50995
+i=109, Output values info: -5.9648
+i=110, Output values info: -2.19775
+i=111, Output values info: -5.30506
+i=112, Output values info: 1.79401
+i=113, Output values info: -6.95445
+i=114, Output values info: 7.32526
+i=115, Output values info: -3.86379
+i=116, Output values info: -5.74176
+i=117, Output values info: 0.0213079
+i=118, Output values info: -4.55656
+i=119, Output values info: 1.90024
+i=120, Output values info: -6.24578
+end predict
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0bac10
+for track 1
+find center
+vec id size=121, vec_e size=121
+my hit energy=0.00180459
+my hit energy=0.000586288
+my hit energy=0
+my hit energy=0.0028145
+my hit energy=0.001392
+my hit energy=0.000622637
+my hit energy=4.57916e-44
+my hit energy=0.00368835
+my hit energy=0
+my hit energy=0.00163659
+my hit energy=0
+my hit energy=0.000635162
+my hit energy=0
+my hit energy=0.00399583
+my hit energy=0
+my hit energy=0.00538988
+my hit energy=4.57916e-44
+my hit energy=0.00425008
+my hit energy=4.57916e-44
+my hit energy=0.00490476
+my hit energy=0.00142616
+my hit energy=0
+my hit energy=0.00332438
+my hit energy=0
+my hit energy=0.00686501
+my hit energy=0.012685
+Done Prediction
+for event 63
+Done Prediction
+for event 64
+emcCls=0x7fa64c04f5b0
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0de7f0
+Done Prediction
+for event 65
+Done Prediction
+for event 66
+Done Prediction
+for event 67
+Done Prediction
+for event 68
+emcCls=0x7fa64c06a240
+emcCls=0x7fa64c091fd0
+Done Prediction
+for event 69
+Done Prediction
+for event 70
+emcCls=0x7fa64c076d70
+emcCls=0x7fa64c052f10
+Done Prediction
+for event 71
+Done Prediction
+for event 72
+emcCls=0x7fa64c03dc80
+Done Prediction
+for event 73
+Done Prediction
+for event 74
+Done Prediction
+for event 75
+Done Prediction
+for event 76
+emcCls=0x7fa64c0615d0
+emcCls=0x7fa64c082940
+Done Prediction
+for event 77
+emcCls=0x7fa64c079240
+emcCls=0x7fa64c08dfb0
+Done Prediction
+for event 78
+Done Prediction
+for event 79
+Done Prediction
+for event 80
+emcCls=0x7fa64c0a1a00
+emcCls=0x7fa64c0637d0
+Done Prediction
+for event 81
+emcCls=0x7fa64c0734a0
+Done Prediction
+for event 82
+emcCls=0x7fa64c0452e0
+for track 0
+find center
+i =0,for em, mom= 1.73205, M_dtheta=1.30871, M_dphi=-6.9815, P_dz=0.888981,P_dphi=-1.45073,e_ext_z=-102.617
+TF input mom= 1.73205, M_dtheta=1.30871, M_dphi=-0.69815, P_dz=0.888981,P_dphi=-1.45073
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: 1.12244e-42
+i=62, Output values info: 9.53535e+21
+i=63, Output values info: 9.45266e+21
+i=64, Output values info: -3.20674
+i=65, Output values info: 1.0776e-42
+i=66, Output values info: 9.53535e+21
+i=67, Output values info: 9.44487e+21
+i=68, Output values info: 4.48416e-44
+i=69, Output values info: 5.04467e-44
+i=70, Output values info: 9.45338e+21
+i=71, Output values info: 9.44487e+21
+i=72, Output values info: 8.96831e-44
+i=73, Output values info: 5.04467e-44
+i=74, Output values info: 9.55037e+21
+i=75, Output values info: 9.44487e+21
+i=76, Output values info: -3.25617
+i=77, Output values info: 9.10844e-44
+i=78, Output values info: 9.5394e+21
+i=79, Output values info: 9.44487e+21
+i=80, Output values info: 4.48416e-44
+i=81, Output values info: 5.04467e-44
+i=82, Output values info: 9.45334e+21
+i=83, Output values info: 9.44487e+21
+i=84, Output values info: 2.24208e-43
+i=85, Output values info: 5.04467e-44
+i=86, Output values info: 9.45352e+21
+i=87, Output values info: 9.45269e+21
+i=88, Output values info: 2.69049e-43
+i=89, Output values info: 5.04467e-44
+i=90, Output values info: 9.45327e+21
+i=91, Output values info: 9.45331e+21
+i=92, Output values info: 9.45331e+21
+i=93, Output values info: 7.63708e-43
+i=94, Output values info: 9.44546e+21
+i=95, Output values info: 9.44546e+21
+i=96, Output values info: -3.03274
+i=97, Output values info: -1.99011
+i=98, Output values info: -5.47103
+i=99, Output values info: -1.88368
+i=100, Output values info: 2.58116
+i=101, Output values info: 1.34188
+i=102, Output values info: -7.19166
+i=103, Output values info: 3.18977
+i=104, Output values info: -4.53998
+i=105, Output values info: -4.86311
+i=106, Output values info: -4.36688
+i=107, Output values info: -6.67366
+i=108, Output values info: -1.50995
+i=109, Output values info: -5.9648
+i=110, Output values info: -2.19775
+i=111, Output values info: -5.30506
+i=112, Output values info: 1.79401
+i=113, Output values info: -6.95445
+i=114, Output values info: 7.32526
+i=115, Output values info: -3.86379
+i=116, Output values info: -5.74176
+i=117, Output values info: 0.0213079
+i=118, Output values info: -4.55656
+i=119, Output values info: 1.90024
+i=120, Output values info: -6.24578
+end predict
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c084a40
+for track 1
+find center
+vec id size=121, vec_e size=121
+my hit energy=0.0012798
+my hit energy=0
+my hit energy=0.00180459
+my hit energy=4.57916e-44
+my hit energy=0.0028145
+my hit energy=0.001392
+my hit energy=0.000622637
+my hit energy=0.00368835
+my hit energy=0
+my hit energy=0.00538988
+my hit energy=0
+my hit energy=0.00425008
+my hit energy=4.57916e-44
+my hit energy=0.00490476
+my hit energy=0
+my hit energy=0.00332438
+my hit energy=0.00686501
+Done Prediction
+for event 83
+emcCls=0x7fa64c02b930
+emcCls=0x7fa64c073fe0
+Done Prediction
+for event 84
+Done Prediction
+for event 85
+Done Prediction
+for event 86
+emcCls=0x7fa64c0c9020
+Done Prediction
+for event 87
+emcCls=0x7fa64c0ca060
+Done Prediction
+for event 88
+emcCls=0x7fa64c074480
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c05ba00
+Done Prediction
+for event 89
+emcCls=0x7fa64c09a4b0
+Done Prediction
+for event 90
+emcCls=0x7fa64c06bcf0
+emcCls=0x7fa64c0d2400
+Done Prediction
+for event 91
+Done Prediction
+for event 92
+emcCls=0x7fa64c0dbac0
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0bfe80
+for track 1
+find center
+i =1,for em, mom= 1.74259, M_dtheta=0.9489, M_dphi=-5.60917, P_dz=0.663105,P_dphi=0.194857,e_ext_z=-118.474
+TF input mom= 1.74259, M_dtheta=0.9489, M_dphi=-0.560917, P_dz=0.663105,P_dphi=0.194857
+i=0, Output values info: 0
+i=1, Output values info: 0
+i=2, Output values info: 0
+i=3, Output values info: 0
+i=4, Output values info: 0
+i=5, Output values info: 0
+i=6, Output values info: 0
+i=7, Output values info: 0
+i=8, Output values info: 0
+i=9, Output values info: 0
+i=10, Output values info: 0
+i=11, Output values info: 0
+i=12, Output values info: 0
+i=13, Output values info: 0
+i=14, Output values info: 0
+i=15, Output values info: 0
+i=16, Output values info: 0
+i=17, Output values info: 0
+i=18, Output values info: 0.00066843
+i=19, Output values info: 0.00388104
+i=20, Output values info: 0
+i=21, Output values info: 0
+i=22, Output values info: 0
+i=23, Output values info: 0
+i=24, Output values info: 0.0127084
+i=25, Output values info: 0.0172282
+i=26, Output values info: 0
+i=27, Output values info: 0
+i=28, Output values info: 0
+i=29, Output values info: 0
+i=30, Output values info: 1.26656
+i=31, Output values info: 0.000781843
+i=32, Output values info: 0
+i=33, Output values info: 0
+i=34, Output values info: 0
+i=35, Output values info: 0.0040172
+i=36, Output values info: 0.00379515
+i=37, Output values info: 0
+i=38, Output values info: 0
+i=39, Output values info: 0
+i=40, Output values info: 0
+i=41, Output values info: 0.00530113
+i=42, Output values info: 0
+i=43, Output values info: 0
+i=44, Output values info: 0
+i=45, Output values info: 0
+i=46, Output values info: 0
+i=47, Output values info: 0
+i=48, Output values info: 0
+i=49, Output values info: 0
+i=50, Output values info: 0
+i=51, Output values info: 0
+i=52, Output values info: 0
+i=53, Output values info: 0
+i=54, Output values info: 0
+i=55, Output values info: 0
+i=56, Output values info: 0
+i=57, Output values info: 0
+i=58, Output values info: 0
+i=59, Output values info: 0
+i=60, Output values info: 0
+i=61, Output values info: -3.62286
+i=62, Output values info: 2.73635
+i=63, Output values info: -5.53803
+i=64, Output values info: -3.34925
+i=65, Output values info: 4.72238e-43
+i=66, Output values info: 9.44487e+21
+i=67, Output values info: 9.45197e+21
+i=68, Output values info: 4.48416e-44
+i=69, Output values info: 5.04467e-44
+i=70, Output values info: 9.55037e+21
+i=71, Output values info: 9.44487e+21
+i=72, Output values info: 4.53547
+i=73, Output values info: 9.10844e-44
+i=74, Output values info: 9.44487e+21
+i=75, Output values info: 9.44487e+21
+i=76, Output values info: 4.48416e-44
+i=77, Output values info: 5.04467e-44
+i=78, Output values info: 9.45396e+21
+i=79, Output values info: 9.44487e+21
+i=80, Output values info: 1.79366e-43
+i=81, Output values info: 5.04467e-44
+i=82, Output values info: 9.45414e+21
+i=83, Output values info: 9.45139e+21
+i=84, Output values info: 2.24208e-43
+i=85, Output values info: 5.04467e-44
+i=86, Output values info: 9.45197e+21
+i=87, Output values info: 9.45201e+21
+i=88, Output values info: 9.45201e+21
+i=89, Output values info: 2.03188e-43
+i=90, Output values info: 9.44882e+21
+i=91, Output values info: 9.44501e+21
+i=92, Output values info: 8.42671e-33
+i=93, Output values info: 8.41459e-33
+i=94, Output values info: 0
+i=95, Output values info: 0
+i=96, Output values info: 0
+i=97, Output values info: 1.13505e-43
+i=98, Output values info: 9.44866e+21
+i=99, Output values info: 9.54307e+21
+i=100, Output values info: 9.53536e+21
+i=101, Output values info: 9.55039e+21
+i=102, Output values info: 0
+i=103, Output values info: 4.62428e-44
+i=104, Output values info: 9.44882e+21
+i=105, Output values info: 9.55388e+21
+i=106, Output values info: 4.70836e-43
+i=107, Output values info: 9.52883e-44
+i=108, Output values info: 2.26054e-32
+i=109, Output values info: 1.4013e-45
+i=110, Output values info: 9.45273e+21
+i=111, Output values info: 9.07767e-38
+i=112, Output values info: 0
+i=113, Output values info: 1.69557e-43
+i=114, Output values info: 0
+i=115, Output values info: 2.25609e-43
+i=116, Output values info: 9.44503e+21
+i=117, Output values info: 9.44503e+21
+i=118, Output values info: 1.4013e-45
+i=119, Output values info: 4.62428e-44
+i=120, Output values info: 9.55388e+21
+end predict
+vec id size=121, vec_e size=121
+my hit energy=0.000617145
+Done Prediction
+for event 93
+emcCls=0x7fa64c084250
+for track 0
+find center
+vec id size=121, vec_e size=121
+emcCls=0x7fa64c0a0560
+for track 1
+find center
+i =1,for em, mom= 1.51007, M_dtheta=0.990117, M_dphi=-7.4823, P_dz=0.288307,P_dphi=-0.162849,e_ext_z=-127.153
+Done Prediction
+for event 94
+Done Prediction
+for event 95
+emcCls=0x7fa64c0e1dc0
+Done Prediction
+for event 96
+emcCls=0x7fa64c071d50
+Done Prediction
+for event 97
+emcCls=0x7fa64c082fd0
+emcCls=0x7fa64c0a1590
+Done Prediction
+for event 98
+emcCls=0x7fa64c0d4ff0
+Done Prediction
+for event 99
+Done Prediction
+for event 100
+emcCls=0x7fa64c0c5830
+Done Prediction
+ApplicationMgr       INFO Application Manager Stopped successfully[m
+ApplicationMgr       INFO Application Manager Finalized successfully[m
+ApplicationMgr       INFO Application Manager Terminated successfully[m

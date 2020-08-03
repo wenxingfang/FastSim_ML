@@ -1,0 +1,64 @@
+//##############################################################
+//
+// Job options file
+//
+//==============================================================
+
+//#include "$ROOTIOROOT/share/jobOptions_ReadRec.txt"
+//#include "$MAGNETICFIELDROOT/share/MagneticField.txt"
+//#include "$ABSCORROOT/share/jobOptions_AbsCor.txt"
+
+//#include "/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/run/jobOptions_Rec2Root.txt"
+ApplicationMgr.DLLs += {"RootCnvSvc"};
+ApplicationMgr.ExtSvc += {"EvtPersistencySvc/EventPersistencySvc"};
+ApplicationMgr.ExtSvc +={"RootEvtSelector/EventSelector","RootCnvSvc/EventCnvSvc"};
+EventPersistencySvc.CnvServices += {"EventCnvSvc"};
+ApplicationMgr.DLLs += { "EmcRecGeoSvc" };
+ApplicationMgr.ExtSvc += { "EmcRecGeoSvc" };
+
+
+ApplicationMgr.DLLs += { "TF_Prediction" };
+ApplicationMgr.TopAlg += { "Prediction" };
+
+//#include "/junofs/users/wxfang/FastSim/bes3/workarea/Reconstruction/EmcRec/EmcRec-01-02-57/share/EmcRecOptions.txt"
+
+//--------------------------------------------------------------
+// Set output level threshold (2=DEBUG, 3=INFO, 4=WARNING, 5=ERROR, 6=FATAL )
+//--------------------------------------------------------------
+
+MessageSvc.OutputLevel      = 2;
+MessageSvc.useColors        = true;
+
+//--------------------------------------------------------------
+// Event related parameters
+//--------------------------------------------------------------
+// dummy event loop
+//ApplicationMgr.EvtSel = "NONE";
+
+
+//--------------------------------------------------------------
+// Algorithms Private Options
+//--------------------------------------------------------------
+
+// For the Prediction algorithm
+Prediction.MyInt = 42;
+Prediction.MyBool = true;
+Prediction.MyDouble = 3.14159;
+Prediction.MyStringVec = { "Welcome", "to", "Boss", "Framework", "Tutorial" };
+
+Prediction.em_Low_pb_name ="/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_Low.pb";
+Prediction.em_High_pb_name="/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_High.pb";
+Prediction.ep_Low_pb_name ="/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_Low.pb";
+Prediction.ep_High_pb_name="/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_High.pb";
+Prediction.input_op_name  ="gen_input";
+Prediction.output_op_name ="re_lu_5/Relu";
+Prediction.ElectronicsNoiseLevel = 0.0005; 
+Prediction.Compensate  = 1; 
+
+EventCnvSvc.digiRootInputFile = {"/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec"};
+
+// Number of events to be processed (default is 10)
+ApplicationMgr.EvtMax = 100;
+
+//EventCnvSvc.digiRootOutputFile ="./mc_0_test.rec";
+

@@ -1,0 +1,669 @@
+
+**************************************************
+               BOSS version: 7.0.3
+************** BESIII Collaboration **************
+
+the jobOptions file is : share/TF_Prediction.txt
+JobOptionsSvc        INFO # =======> /junofs/users/wxfang/FastSim/bes3/workarea/BesExamples/TF_Prediction/TF_Prediction-00-00-01/share/TF_Prediction.txt
+JobOptionsSvc        INFO # (12,1): ApplicationMgr.DLLs += ["RootCnvSvc"]
+JobOptionsSvc        INFO # (13,1): ApplicationMgr.ExtSvc += ["EvtPersistencySvc/EventPersistencySvc"]
+JobOptionsSvc        INFO # (14,1): ApplicationMgr.ExtSvc += ["RootEvtSelector/EventSelector", "RootCnvSvc/EventCnvSvc"]
+JobOptionsSvc        INFO # (15,1): EventPersistencySvc.CnvServices += ["EventCnvSvc"]
+JobOptionsSvc        INFO # (16,1): ApplicationMgr.DLLs += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (17,1): ApplicationMgr.ExtSvc += ["EmcRecGeoSvc"]
+JobOptionsSvc        INFO # (20,1): ApplicationMgr.DLLs += ["TF_Prediction"]
+JobOptionsSvc        INFO # (21,1): ApplicationMgr.TopAlg += ["Prediction"]
+JobOptionsSvc        INFO # (27,1): MessageSvc.OutputLevel = 2
+JobOptionsSvc        INFO # (28,1): MessageSvc.useColors = 1
+JobOptionsSvc        INFO # (42,1): Prediction.MyInt = 42
+JobOptionsSvc        INFO # (43,1): Prediction.MyBool = 1
+JobOptionsSvc        INFO # (44,1): Prediction.MyDouble = 3.14159
+JobOptionsSvc        INFO # (45,1): Prediction.MyStringVec = ["Welcome", "to", "Boss", "Framework", "Tutorial"]
+JobOptionsSvc        INFO # (47,1): Prediction.em_Low_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_Low.pb"
+JobOptionsSvc        INFO # (48,1): Prediction.em_High_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_em_High.pb"
+JobOptionsSvc        INFO # (49,1): Prediction.ep_Low_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_Low.pb"
+JobOptionsSvc        INFO # (50,1): Prediction.ep_High_pb_name = "/hpcfs/juno/junogpu/fangwx/FastSim/BES/generator/model_ep_High.pb"
+JobOptionsSvc        INFO # (51,1): Prediction.input_op_name = "gen_input"
+JobOptionsSvc        INFO # (52,1): Prediction.output_op_name = "re_lu_5/Relu"
+JobOptionsSvc        INFO # (53,1): Prediction.ElectronicsNoiseLevel = 0.0005
+JobOptionsSvc        INFO # (55,1): EventCnvSvc.digiRootInputFile = ["/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec"]
+JobOptionsSvc        INFO # (58,1): ApplicationMgr.EvtMax = 100
+JobOptionsSvc        INFO Job options successfully read in from share/TF_Prediction.txt
+ApplicationMgr      DEBUG Getting my own properties[m
+ApplicationMgr    SUCCESS 
+====================================================================================================================================
+                                                   Welcome to ApplicationMgr (GaudiCoreSvc v1r5)
+                                          running on lxslc606.ihep.ac.cn on Tue Oct 22 12:59:59 2019
+====================================================================================================================================[m
+
+[1mRooFit v3.56 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+ApplicationMgr       INFO Successfully loaded modules : RootCnvSvc, EmcRecGeoSvc, TF_Prediction[m
+RootCnvSvc          DEBUG RootCnvSvc::constructor[m
+ApplicationMgr       INFO Application Manager Configured successfully[m
+ServiceManager      DEBUG Initializing service IncidentSvc[m
+IncidentSvc         DEBUG Service base class initialized successfully[m
+ServiceManager      DEBUG Initializing service EventPersistencySvc[m
+EventPersistenc...  DEBUG  'CnvServices':[ 'EventCnvSvc' ][m
+EventPersistenc...  DEBUG Service base class initialized successfully[m
+ServiceManager      DEBUG Initializing service EventSelector[m
+EventSelector       DEBUG Service base class initialized successfully[m
+EventSelector       DEBUG RootEvtSelector::initialize[m
+EventSelector        INFO RootEvtSelector input has been set to ROOT[m
+EventDataSvc        DEBUG Service base class initialized successfully[m
+EventSelector        INFO currentFile in RootEvtSelector::initialize [m
+TagFilterSvc         INFO TagFilterSvc::initialize()[m
+TagFilterSvc        DEBUG Service base class initialized successfully[m
+EventSelector        INFO get the TagFilterSvc[m
+TagFilterSvc, number of tag files: 0
+ServiceManager      DEBUG Initializing service EventCnvSvc[m
+EventCnvSvc         DEBUG RootCnvSvc::initialize[m
+EventCnvSvc         DEBUG Service base class initialized successfully[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMdcDedxCol classid: 132492[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst classid: 1400[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/EmcDigiCol classid: 132392[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/EmcMcHitCol classid: 132285[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstEmcShowerCol classid: 132512[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event classid: 110[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EventHeader classid: 112[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Navigator classid: 5101[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstExtTrackCol classid: 132532[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC classid: 1200[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/McParticleCol classid: 263345[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/MdcDigiCol classid: 132382[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMdcKalTrackCol classid: 132487[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/MdcMcHitCol classid: 132283[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMdcTrackCol classid: 132482[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/MucDigiCol classid: 132412[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/MucMcHitCol classid: 132286[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstMucTrackCol classid: 132522[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi classid: 1300[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/TofDigiCol classid: 132402[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/MC/TofMcHitCol classid: 132284[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Dst/DstTofTrackCol classid: 132502[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Digi/LumiDigiCol classid: 132422[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Trig classid: 2100[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Trig/TrigData classid: 2120[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt classid: 2200[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt/HltRawCol classid: 133282[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt/HltInf classid: 2220[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Hlt/DstHltInf classid: 2230[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon classid: 3000[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcTrackCol classid: 134182[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcHitCol classid: 134192[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcKalTrackCol classid: 134222[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcKalHelixSegCol classid: 134232[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcDedxCol classid: 134212[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMdcDedxHitCol classid: 134217[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEsTimeCol classid: 134682[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecTofTrackCol classid: 134402[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecBTofCalHitCol classid: 134422[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecETofCalHitCol classid: 134432[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEmcHitCol classid: 134292[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEmcClusterCol classid: 134302[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecEmcShowerCol classid: 134282[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecMucTrackCol classid: 134482[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/MucRecHitCol classid: 134492[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecExtTrackCol classid: 134582[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/Recon/RecZddChannelCol classid: 134882[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec classid: 4000[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecEvent classid: 4010[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecTrackCol classid: 135172[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecPrimaryVertex classid: 4020[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecVeeVertexCol classid: 135182[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecPi0Col classid: 135202[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecEtaToGGCol classid: 135212[m
+EventCnvSvc         DEBUG RootCnvSvc::declareObject /Event/EvtRec/EvtRecDTagCol classid: 135192[m
+EventCnvSvc         DEBUG RootCnvSvc::initFiles[m
+EventCnvSvc          INFO Root Input files 1[m
+RootCnvSvc          DEBUG addInput  for Tree Event[m
+[93;1mEventCnvSvc       WARNING No specified digiRootOutputFile![m
+ServiceManager      DEBUG Initializing service EmcRecGeoSvc[m
+EmcRecGeoSvc         INFO EmcRecGeoSvc: Start of run initialisation[m
+EmcRecGeoSvc        DEBUG Service base class initialized successfully[m
+Construct Emc from GdmlFile /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/DetectorDescription/GdmlManagement/GdmlManagement-00-00-43/dat/Emc.gdml
+SAXProcessor type ROOT
+SAXProcessor requires type 2
+Top Volume not found 
+Find logicalEMC!
+gGeoManager success!
+ServiceManager      DEBUG Initializing service AppMgrRunable[m
+AppMgrRunable       DEBUG Service base class initialized successfully[m
+ServiceManager      DEBUG Initializing service EventLoopMgr[m
+EventLoopMgr        DEBUG Service base class initialized successfully[m
+IncidentSvc         DEBUG Adding [AbortEvent] listener '<unknown>' with priority 0[m
+EventLoopMgr        DEBUG Creating Top Algorithm Prediction with name Prediction[m
+Prediction           INFO  Prediction initialize()[m
+HistogramDataSvc    DEBUG Service base class initialized successfully[m
+HistogramPersis...  DEBUG  'CnvServices':[ 'RootHistSvc' ][m
+HistogramPersis...  DEBUG Service base class initialized successfully[m
+[93;1mHistogramPersis...WARNING Histograms saving not required.[m
+ApplicationMgr       INFO Application Manager Initialized successfully[m
+ServiceManager      DEBUG Starting service IncidentSvc[m
+ServiceManager      DEBUG Starting service EventPersistencySvc[m
+ServiceManager      DEBUG Starting service EventSelector[m
+ServiceManager      DEBUG Starting service EventCnvSvc[m
+ServiceManager      DEBUG Starting service EmcRecGeoSvc[m
+ServiceManager      DEBUG Starting service AppMgrRunable[m
+ServiceManager      DEBUG Starting service EventDataSvc[m
+ServiceManager      DEBUG Starting service TagFilterSvc[m
+ServiceManager      DEBUG Starting service HistogramPersistencySvc[m
+ServiceManager      DEBUG Starting service HistogramDataSvc[m
+ServiceManager      DEBUG Starting service EventLoopMgr[m
+ApplicationMgr       INFO Application Manager Started successfully[m
+EventSelector        INFO m_criteriaType == ROOT[m
+EventSelector        INFO entry = 1    0   0[m
+EventSelector       DEBUG Reading Event 0[m
+EventSelector       DEBUG Max Event 100[m
+EventPersistenc...   INFO Added successfully Conversion service:EventCnvSvc[m
+EventCnv            DEBUG EventCnv::EventCnv()[m
+EventCnv            DEBUG createObj[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  1300 *****  /Event/Digi[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  1400 *****  /Event/Dst[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  112 *****  /Event/EventHeader[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  4000 *****  /Event/EvtRec[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  2200 *****  /Event/Hlt[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  1200 *****  /Event/MC[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  5101 *****  /Event/Navigator[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  3000 *****  /Event/Recon[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  2100 *****  /Event/Trig[m
+Prediction           INFO AtlasPrediction execute()[m
+for event 1
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 4000[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+EvtRecCnv           DEBUG EvtRecCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  135192 *****  /Event/EvtRec/EvtRecDTagCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  135212 *****  /Event/EvtRec/EvtRecEtaToGGCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  4010 *****  /Event/EvtRec/EvtRecEvent[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  135202 *****  /Event/EvtRec/EvtRecPi0Col[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  4020 *****  /Event/EvtRec/EvtRecPrimaryVertex[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  135172 *****  /Event/EvtRec/EvtRecTrackCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  135182 *****  /Event/EvtRec/EvtRecVeeVertexCol[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 4010[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_evtRecEvent[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootCnvSvc           INFO RootInterface::opened file for input:/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec[m
+RootCnvSvc           INFO get JobInfoTree[m
+
+**************************************************
+Print JobInfo for data file: /junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec
+          BOSS version: 7.0.3
+**************************************************
+
+DataInfoSvc          INFO DataInfoSvc::initialize()[m
+DataInfoSvc         DEBUG Service base class initialized successfully[m
+RootCnvSvc           INFO get the DataInfoSvc[m
+
+**************************************************
+          JobOptions for this data file: 
+
+#include "$OFFLINEEVENTLOOPMGRROOT/share/OfflineEventLoopMgr_Option.txt"
+ApplicationMgr.DLLs += {"Babayaga"};
+ApplicationMgr.TopAlg += {"Babayaga"};
+BesRndmGenSvc.RndmSeed = 20100;
+#include "$BESSIMROOT/share/G4Svc_BesSim.txt"
+#include "$CALIBSVCROOT/share/calibConfig_sim.txt"
+#include "$ROOTIOROOT/share/jobOptions_Digi2Root.txt"
+RootCnvSvc.digiRootOutputFile = "/besfs/groups/cal/emc/liucx/BhabhaCalib/mcdata/bb703/bb1776_703_2017_100.rtraw";
+MessageSvc.OutputLevel  = 6;
+ApplicationMgr.EvtMax = 10000;
+
+          end of the jobOptions file 
+**************************************************
+
+#include "$ROOTIOROOT/share/jobOptions_ReadRoot.txt"
+#include "$OFFLINEEVENTLOOPMGRROOT/share/OfflineEventLoopMgr_Option.txt"
+#include "$BESEVENTMIXERROOT/share/jobOptions_EventMixer_rec.txt"
+#include "$CALIBSVCROOT/share/job-CalibData.txt"
+#include "$MAGNETICFIELDROOT/share/MagneticField.txt"
+#include "$ESTIMEALGROOT/share/job_EsTimeAlg.txt"
+#include "$MDCHOUGHFINDERROOT/share/jobOptions_MdcPatTsfHoughRec.txt"
+#include "$KALFITALGROOT/share/job_kalfit_numf_data.txt"
+#include "$MDCDEDXALGROOT/share/job_dedx_all.txt"
+#include "$TRKEXTALGROOT/share/TrkExtAlgOption.txt"
+#include "$TOFRECROOT/share/jobOptions_TofRec.txt"
+#include "$TOFENERGYRECROOT/share/TofEnergyRecOptions_MC.txt"
+#include "$EMCRECROOT/share/EmcRecOptions.txt"
+#include "$MUCRECALGROOT/share/jobOptions_MucRec.txt"
+#include "$EVENTASSEMBLYROOT/share/EventAssembly.txt"
+#include "$PRIMARYVERTEXALGROOT/share/jobOptions_kalman.txt"
+#include "$VEEVERTEXALGROOT/share/jobOptions_veeVertex.txt"
+#include "$HLTMAKERALGROOT/share/jobOptions_HltMakerAlg.txt"
+#include "$EVENTNAVIGATORROOT/share/EventNavigator.txt"
+#include "/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/run/jobOptions_Rec2Root.txt"
+#include "$CALIBSVCROOT/share/calibConfig_rec_mc.txt"
+BesRndmGenSvc.RndmSeed = 100;
+MessageSvc.OutputLevel = 2; 
+EventCnvSvc.digiRootInputFile = {"/besfs/groups/cal/emc/liucx/BhabhaCalib/mcdata/bb703/bb1776_703_2017_100.rtraw"};
+EventCnvSvc.digiRootOutputFile ="/junofs/users/wxfang/FastSim/bes3/workarea/TestRelease/TestRelease-00-00-86/output/mc_0.rec";
+ApplicationMgr.EvtMax = -1;
+
+          end of the jobOptions file 
+**************************************************
+
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 0, entry 0[m
+EvtRecEventCnv      DEBUG EvtRecEventCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 135172[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_evtRecTrackCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 1, entry 0[m
+EvtRecTrackCnv      DEBUG EvtRecTrackCnv::TObjectToDataObject[m
+RecTrackCnv         DEBUG RecTrackCnv::initialize[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 3000[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RecTrackCnv         DEBUG TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134492 *****  /Event/Recon/MucRecHitCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134422 *****  /Event/Recon/RecBTofCalHitCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134432 *****  /Event/Recon/RecETofCalHitCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134302 *****  /Event/Recon/RecEmcClusterCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134292 *****  /Event/Recon/RecEmcHitCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134282 *****  /Event/Recon/RecEmcShowerCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134682 *****  /Event/Recon/RecEsTimeCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134582 *****  /Event/Recon/RecExtTrackCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134212 *****  /Event/Recon/RecMdcDedxCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134217 *****  /Event/Recon/RecMdcDedxHitCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134192 *****  /Event/Recon/RecMdcHitCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134232 *****  /Event/Recon/RecMdcKalHelixSegCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134222 *****  /Event/Recon/RecMdcKalTrackCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134182 *****  /Event/Recon/RecMdcTrackCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134482 *****  /Event/Recon/RecMucTrackCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134402 *****  /Event/Recon/RecTofTrackCol[m
+EventCnvSvc         DEBUG RootCnvSvc::updateService  *****  134882 *****  /Event/Recon/RecZddChannelCol[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134182[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMdcTrackCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 2, entry 0[m
+RecMdcTrackCnv      DEBUG RecMdcTrackCnv::TObjectToDataObject[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134192[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMdcHitCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 3, entry 0[m
+RecMdcHitCnv        DEBUG RecMdcHitCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134222[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMdcKalTrackCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 4, entry 0[m
+RecMdcKalTrackCnv   DEBUG RecMdcKalTrackCnv::TObjectToDataObject[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134232[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMdcKalHelixSegCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 5, entry 0[m
+RecMdcKalHelixS...  DEBUG RecMdcKalHelixSegCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RecMdcKalTrackCnv   DEBUG T to REC TDS, zhelix: 
+   -0.0159406
+      4.16457
+    -0.895981
+   -0.0218631
+      -1.2735
+[m
+RecMdcKalTrackCnv   DEBUG T to REC TDS, zerror: 
+   0.00013969   1.52869e-05  -2.83939e-05   0.000249455  -4.68395e-06 
+  1.52869e-05   2.70849e-06  -1.68303e-06   1.15034e-05  -2.38772e-07 
+ -2.83939e-05  -1.68303e-06   1.77412e-05    -8.682e-05   4.11147e-06 
+  0.000249455   1.15034e-05    -8.682e-05     0.0151242  -0.000332153 
+ -4.68395e-06  -2.38772e-07   4.11147e-06  -0.000332153   1.33117e-05 
+[m
+RecMdcKalTrackCnv   DEBUG T to REC TDS, zhelix: 
+   0.00903535
+      1.00333
+     0.936579
+     0.100746
+      1.32564
+[m
+RecMdcKalTrackCnv   DEBUG T to REC TDS, zerror: 
+  0.000163916   1.77109e-05  -3.55759e-05   0.000131202  -4.85536e-06 
+  1.77109e-05   3.07717e-06  -2.11644e-06   5.33538e-06  -2.68505e-07 
+ -3.55759e-05  -2.11644e-06   2.14759e-05  -4.45182e-05    4.8466e-06 
+  0.000131202   5.33538e-06  -4.45182e-05     0.0176047  -0.000386206 
+ -4.85536e-06  -2.68505e-07    4.8466e-06  -0.000386206   1.60708e-05 
+[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134212[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMdcDedxCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 6, entry 0[m
+RecMdcDedxCnv       DEBUG RecMdcDedxCnv::TObjectToDataObject[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134217[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMdcDedxHitCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 7, entry 0[m
+RecMdcDedxHitCnv    DEBUG RecMdcDedxHitCnv::TObjectToDataObject[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 1.93871 dedx: 650[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.02022 dedx: 676[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.00652 dedx: 589[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 1.9471 dedx: 427[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 1.87131 dedx: 431[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 1.81576 dedx: 573[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 1.96473 dedx: 587[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.54008 dedx: 567[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.74248 dedx: 741[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.54773 dedx: 649[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.57231 dedx: 550[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.71118 dedx: 792[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.55766 dedx: 458[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.70411 dedx: 716[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.51753 dedx: 648[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.65571 dedx: 541[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.51806 dedx: 644[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.60762 dedx: 596[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.49137 dedx: 703[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.58265 dedx: 460[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.66894 dedx: 381[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.7758 dedx: 528[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 0.759298 dedx: 502[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.64734 dedx: 574[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.77255 dedx: 658[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.83677 dedx: 572[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.48075 dedx: 619[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.59825 dedx: 680[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.67984 dedx: 432[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.76119 dedx: 448[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 1.65413 dedx: 399[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 0.776835 dedx: 781[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.52356 dedx: 450[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.59054 dedx: 530[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.65651 dedx: 458[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.58438 dedx: 680[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.62563 dedx: 573[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: 1 pathlength: 2.68313 dedx: 843[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.77315 dedx: 591[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.4809 dedx: 905[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 0 flagLR: -1 pathlength: 2.58778 dedx: 575[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.07019 dedx: 438[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.13682 dedx: 506[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.05397 dedx: 1696[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 1.89693 dedx: 478[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 1.91725 dedx: 614[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 1.85931 dedx: 1954[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.0098 dedx: 822[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.80938 dedx: 817[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.61009 dedx: 840[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.80157 dedx: 733[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.63588 dedx: 523[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.77802 dedx: 909[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.62145 dedx: 635[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.77068 dedx: 609[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.57897 dedx: 563[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.72079 dedx: 473[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.57965 dedx: 468[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.06838 dedx: 314[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.54449 dedx: 457[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.64264 dedx: 674[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.66113 dedx: 622[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.4716 dedx: 450[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.8483 dedx: 513[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.91574 dedx: 407[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.547 dedx: 724[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.66523 dedx: 716[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.83011 dedx: 771[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.49069 dedx: 400[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.58975 dedx: 416[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.65743 dedx: 625[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.72412 dedx: 465[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.69379 dedx: 652[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.75304 dedx: 511[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.84523 dedx: 584[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.54572 dedx: 759[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: 1 pathlength: 2.6387 dedx: 589[m
+RecMdcDedxHitCnv    DEBUG TObjectToDataObject: check Reconstrunction of dE/dx Hit root:: trackId: 1 flagLR: -1 pathlength: 2.65598 dedx: 521[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RecMdcDedxCnv       DEBUG TObjectToDataObject: check Reconstrunction of dE/dx root:: trackId: 0 particleId: 0 status: 1 truncAlg: 1 chi[2]: 2.86035 numTotalHits: 41 probPH: 532.667 errorPH: 6.01357e-154 dedxExpect[2]: 453.634[m
+RecMdcDedxCnv       DEBUG TObjectToDataObject: check Reconstrunction of dE/dx root:: trackId: 1 particleId: 0 status: 1 truncAlg: 1 chi[2]: 2.97301 numTotalHits: 38 probPH: 540.208 errorPH: 4.94066e-324 dedxExpect[2]: 452.679[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134582[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recExtTrackCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 8, entry 0[m
+RecExtTrackCnv      DEBUG RecExtTrackCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134402[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recTofTrackCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 9, entry 0[m
+RecTofTrackCnv      DEBUG RecTofTrackCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134282[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recEmcShowerCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 10, entry 0[m
+RecEmcShowerCnv     DEBUG RecEmcShowerCnv::TObjectToDataObject[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134292[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recEmcHitCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 11, entry 0[m
+RecEmcHitCnv        DEBUG RecEmcHitCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134302[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recEmcClusterCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 12, entry 0[m
+RecEmcClusterCnv    DEBUG RecEmcClusterCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+RootEventBaseCnv    DEBUG RootEventBaseCnv::createObj with clid 134482[m
+RootCnvSvc          DEBUG RootInterface::setbranch address, treename: Event, branch m_recMucTrackCol[m
+RootCnvSvc           INFO RootInterface:;getTree[m
+RootEventBaseCnv     INFO  event id = 0[m
+RootEventBaseCnv     INFO  2nd  method set event as : 0[m
+RootCnvSvc          DEBUG RootInterface::getBranchEntry: , branch nr 13, entry 0[m
+RecMucTrackCnv      DEBUG RecMucTrackCnv::TObjectToDataObject[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+EventCnvSvc         DEBUG RootCnvSvc::updateServiceState[m
+for track 0
+find center
+i =0,for em, mom= 1.80047, M_dtheta=2.00522, M_dphi=-6.97138, P_dz=-1.40375,P_dphi=-1.27638,e_ext_z=-120.541
+tf size=121
+for track 1
+find center
+i =1,for ep, mom= 1.78075, M_dtheta=-1.25356, M_dphi=9.27827, P_dz=0.225955,P_dphi=0.181883,e_ext_z=127.643
+tf size=121
+../src/Prediction.cxx315
+../src/Prediction.cxx317
+../src/Prediction.cxx321
+EmcRecTDS            INFO EmcRecTDS::RegisterCluster()[m
+EmcRecTDS            INFO EmcRecTDS::RegisterShower()[m
+EmcRecTDS            INFO EmcRecTDS::RegisterHit()[m
+../src/Prediction.cxx326
+no tf my hit 0, energy=1.16
+no tf my hit 1, energy=1.05
+no tf my hit 2, energy=0.94
+no tf my hit 3, energy=0.83
+no tf my hit 4, energy=0.72
+no tf my hit 5, energy=0.61
+no tf my hit 6, energy=0.5
+no tf my hit 7, energy=0.39
+no tf my hit 8, energy=0.28
+no tf my hit 9, energy=0.17
+no tf my hit 10, energy=0.06
+no tf my hit 11, energy=1.15
+no tf my hit 12, energy=1.04
+no tf my hit 13, energy=0.93
+no tf my hit 14, energy=0.82
+no tf my hit 15, energy=0.71
+no tf my hit 16, energy=0.6
+no tf my hit 17, energy=0.49
+no tf my hit 18, energy=0.38
+no tf my hit 19, energy=0.27
+no tf my hit 20, energy=0.16
+no tf my hit 21, energy=0.05
+no tf my hit 22, energy=1.14
+no tf my hit 23, energy=1.03
+no tf my hit 24, energy=0.92
+no tf my hit 25, energy=0.81
+no tf my hit 26, energy=0.7
+no tf my hit 27, energy=0.59
+no tf my hit 28, energy=0.48
+no tf my hit 29, energy=0.37
+no tf my hit 30, energy=0.26
+no tf my hit 31, energy=0.15
+no tf my hit 32, energy=0.04
+no tf my hit 33, energy=1.13
+no tf my hit 34, energy=1.02
+no tf my hit 35, energy=0.91
+no tf my hit 36, energy=0.8
+no tf my hit 37, energy=0.69
+no tf my hit 38, energy=0.58
+no tf my hit 39, energy=0.47
+no tf my hit 40, energy=0.36
+no tf my hit 41, energy=0.25
+no tf my hit 42, energy=0.14
+no tf my hit 43, energy=0.03
+no tf my hit 44, energy=1.12
+no tf my hit 45, energy=1.01
+no tf my hit 46, energy=0.9
+no tf my hit 47, energy=0.79
+no tf my hit 48, energy=0.68
+no tf my hit 49, energy=0.57
+no tf my hit 50, energy=0.46
+no tf my hit 51, energy=0.35
+no tf my hit 52, energy=0.24
+no tf my hit 53, energy=0.13
+no tf my hit 54, energy=0.02
+no tf my hit 55, energy=1.11
+no tf my hit 56, energy=1
+no tf my hit 57, energy=0.89
+no tf my hit 58, energy=0.78
+no tf my hit 59, energy=0.67
+no tf my hit 60, energy=0.56
+no tf my hit 61, energy=0.45
+no tf my hit 62, energy=0.34
+no tf my hit 63, energy=0.23
+no tf my hit 64, energy=0.12
+no tf my hit 65, energy=0.01
+no tf my hit 66, energy=1.1
+no tf my hit 67, energy=0.99
+no tf my hit 68, energy=0.88
+no tf my hit 69, energy=0.77
+no tf my hit 70, energy=0.66
+no tf my hit 71, energy=0.55
+no tf my hit 72, energy=0.44
+no tf my hit 73, energy=0.33
+no tf my hit 74, energy=0.22
+no tf my hit 75, energy=0.11
+no tf my hit 76, energy=0
+no tf my hit 77, energy=1.2
+no tf my hit 78, energy=1.09
+no tf my hit 79, energy=0.98
+no tf my hit 80, energy=0.87
+no tf my hit 81, energy=0.76
+no tf my hit 82, energy=0.65
+no tf my hit 83, energy=0.54
+no tf my hit 84, energy=0.43
+no tf my hit 85, energy=0.32
+no tf my hit 86, energy=0.21
+no tf my hit 87, energy=0.1
+no tf my hit 88, energy=1.19
+no tf my hit 89, energy=1.08
+no tf my hit 90, energy=0.97
+no tf my hit 91, energy=0.86
+no tf my hit 92, energy=0.75
+no tf my hit 93, energy=0.64
+no tf my hit 94, energy=0.53
+no tf my hit 95, energy=0.42
+no tf my hit 96, energy=0.31
+no tf my hit 97, energy=0.2
+no tf my hit 98, energy=0.09
+no tf my hit 99, energy=1.18
+no tf my hit 100, energy=1.07
+no tf my hit 101, energy=0.96
+no tf my hit 102, energy=0.85
+no tf my hit 103, energy=0.74
+no tf my hit 104, energy=0.63
+no tf my hit 105, energy=0.52
+no tf my hit 106, energy=0.41
+no tf my hit 107, energy=0.3
+no tf my hit 108, energy=0.19
+no tf my hit 109, energy=0.08
+no tf my hit 110, energy=1.17
+no tf my hit 111, energy=1.06
+no tf my hit 112, energy=0.95
+no tf my hit 113, energy=0.84
+no tf my hit 114, energy=0.73
+no tf my hit 115, energy=0.62
+no tf my hit 116, energy=0.51
+no tf my hit 117, energy=0.4
+no tf my hit 118, energy=0.29
+no tf my hit 119, energy=0.18
+no tf my hit 120, energy=0.07
+no tf my hit 121, energy=1.16
+no tf my hit 122, energy=1.05
+no tf my hit 123, energy=0.94
+no tf my hit 124, energy=0.83
+no tf my hit 125, energy=0.72
+no tf my hit 126, energy=0.61
+no tf my hit 127, energy=0.5
+no tf my hit 128, energy=0.39
+no tf my hit 129, energy=0.28
+no tf my hit 130, energy=0.17
+no tf my hit 131, energy=0.06
+no tf my hit 132, energy=1.15
+no tf my hit 133, energy=1.04
+no tf my hit 134, energy=0.93
+no tf my hit 135, energy=0.82
+no tf my hit 136, energy=0.71
+no tf my hit 137, energy=0.6
+no tf my hit 138, energy=0.49
+no tf my hit 139, energy=0.38
+no tf my hit 140, energy=0.27
+no tf my hit 141, energy=0.16
+no tf my hit 142, energy=0.05
+no tf my hit 143, energy=1.14
+no tf my hit 144, energy=1.03
+no tf my hit 145, energy=0.92
+no tf my hit 146, energy=0.81
+no tf my hit 147, energy=0.7
+no tf my hit 148, energy=0.59
+no tf my hit 149, energy=0.48
+no tf my hit 150, energy=0.37
+no tf my hit 151, energy=0.26
+no tf my hit 152, energy=0.15
+no tf my hit 153, energy=0.04
+no tf my hit 154, energy=1.13
+no tf my hit 155, energy=1.02
+no tf my hit 156, energy=0.91
+no tf my hit 157, energy=0.8
+no tf my hit 158, energy=0.69
+no tf my hit 159, energy=0.58
+no tf my hit 160, energy=0.47
+no tf my hit 161, energy=0.36
+no tf my hit 162, energy=0.25
+no tf my hit 163, energy=0.14
+no tf my hit 164, energy=0.03
+Done Prediction

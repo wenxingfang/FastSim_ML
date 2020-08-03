@@ -1,0 +1,761 @@
+#CMT---> (constituents.make) Starting install_includes
+#CMT---> (constituents.make) Starting config
+#CMT---> (constituents.make) Starting TF_Prediction
+#CMT---> (config.make) ../TF_Prediction/config.h.in: No rule for such target
+------> config.h ok
+#CMT---> (constituents.make) config done
+#CMT---> compiling ../src/Prediction.cxx
+#CMT---> (TF_Prediction.make) ../x86_64-slc6-gcc46-opt//TF_Predictionsetup.make: No rule for such target
+Files from standard ../TF_Prediction already installed
+#CMT---> (constituents.make) install_includes done
+In file included from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/aux_/na_assert.hpp:23,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/arg.hpp:25,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/reverse_fold.hpp:20,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/aux_/insert_impl.hpp:17,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/insert.hpp:19,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/IInterface.h:13,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/IProperty.h:6,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/Algorithm.h:8,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:3,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/assert.hpp:154:21: warning: unnecessary parentheses in declaration of ‘assert_arg’ [-Wparentheses]
+ failed ************ (Pred::************
+                     ^
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/Boost/1.50.0_python2.7/x86_64-slc6-gcc46-opt/include/boost-1_50/boost/mpl/assert.hpp:159:21: warning: unnecessary parentheses in declaration of ‘assert_not_arg’ [-Wparentheses]
+ failed ************ (boost::mpl::not_<Pred>::************
+                     ^
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcCalibFunSvc/MdcCalibFunSvc-00-03-16/MdcCalibFunSvc/IMdcCalibFunSvc.h:7,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/MdcRawDataProvider.h:7,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/IRawDataProviderSvc.h:9,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/RawDataProviderSvc.h:13,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:15,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:18:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const MdcGeoWire * const Wire(unsigned id) = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:19:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const MdcGeoWire * const Wire(unsigned lyrid, unsigned wirid) = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:20:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const MdcGeoLayer * const Layer(unsigned id) = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:21:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const MdcGeoSuper * const SuperLayer(unsigned id) = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:22:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const MdcGeoGeneral * const GeneralLayer(unsigned id) = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:24:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const int getWireSize() = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:25:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const int getLayerSize() = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:26:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const int getSuperLayerSize() = 0;
+            ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/IMdcGeomSvc.h:27:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    virtual const int getGeneralLayerSize() = 0;
+            ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:11,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcCalibFunSvc/MdcCalibFunSvc-00-03-16/MdcCalibFunSvc/IMdcCalibFunSvc.h:8,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/MdcRawDataProvider.h:7,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/IRawDataProviderSvc.h:9,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/RawDataProviderSvc.h:13,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:15,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeoWire.h:83:9: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+         const double Sag(void) const;
+         ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeoWire.h:84:9: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+         const double Sagz(const double z) const;
+         ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcCalibFunSvc/MdcCalibFunSvc-00-03-16/MdcCalibFunSvc/IMdcCalibFunSvc.h:8,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/MdcRawDataProvider.h:7,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/IRawDataProviderSvc.h:9,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/RawDataProviderSvc/RawDataProviderSvc-00-03-46/RawDataProviderSvc/RawDataProviderSvc.h:13,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:15,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:38:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoWire * const Wire(unsigned id);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:39:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoWire * const Wire(unsigned lyrid,unsigned wirid);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:40:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoLayer * const Layer(unsigned id);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:41:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoSuper * const SuperLayer(unsigned id);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:42:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoGeneral * const GeneralLayer(unsigned id);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:43:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoMisc * const Misc(void);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:44:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const MdcGeoEnd * const End(unsigned id);
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:45:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getWireSize();
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:46:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getLayerSize();
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:47:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getSuperLayerSize();
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:48:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getGeneralLayerSize();
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:49:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getSegmentNo();
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:67:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getAlignParIndexEast(int lyr) const;
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcGeomSvc/MdcGeomSvc-00-01-37/MdcGeomSvc/MdcGeomSvc.h:68:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getAlignParIndexWest(int lyr) const;
+    ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:14,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:9,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:50:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  helix(const int i) const { return  m_helix[i]; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:51:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  err(const int i)   const { return  m_err[i];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:52:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     trackId()    const { return  m_trackId;  }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:53:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     charge()     const { return  m_charge;   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:54:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  pxy()        const { return  m_pxy;  }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:55:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  px()         const { return  m_px;   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:56:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  py()         const { return  m_py;   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:57:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  pz()         const { return  m_pz;   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:58:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  p()          const { return  m_p;    }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:59:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  theta()      const { return  m_theta;}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:60:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  phi()        const { return  m_phi;  }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:61:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  x()          const { return  m_x;    }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:62:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  y()          const { return  m_y;    }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:63:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  z()          const { return  m_z;    }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:64:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  r()          const { return  m_r;    }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:65:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     stat()       const { return  m_stat; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:66:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double  chi2()       const { return  m_chi2; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:67:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     ndof()       const { return  m_ndof; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:68:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     nster()      const { return  m_nster;}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:69:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     firstLayer() const { return  m_firstLayer;}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:70:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     lastLayer()  const { return  m_lastLayer; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcTrack.h:71:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int     nlayer()     const { return  m_nlayer; }
+   ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:19,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:9,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:40:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    getId(void)                const { return m_id;    }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:41:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const  int   getTrkId(void)             const { return m_trkid; }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:42:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getDriftDistLeft(void)     const { return m_ddl;   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:43:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getDriftDistRight(void)    const { return m_ddr ;  }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:44:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getErrDriftDistLeft(void)  const { return m_erddl; }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:45:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getErrDriftDistRight(void) const { return m_erddr; }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:46:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getChisqAdd(void)          const { return m_pChisq;}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:47:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    getFlagLR(void)            const { return m_lr;    }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:48:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    getStat(void)              const { return m_stat;  }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:50:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getTdc(void)               const { return m_tdc;   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:51:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getAdc(void)               const { return m_adc;   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:52:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getDriftT(void)            const { return m_driftT;}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:53:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getDoca(void)              const { return m_doca;  }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:54:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getEntra(void)             const { return m_entra; }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:55:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getZhit(void)              const { return m_zhit;  }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcHit.h:56:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getFltLen(void)            const { return m_fltLen;}
+    ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:9,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:43:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getVX0()            const { return m_pivot[0];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:44:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getVY0()            const { return m_pivot[1];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:45:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getVZ0()            const { return m_pivot[2];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:49:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    getNhits()          const { return m_nhits;      }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcTrack.h:52:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getFiTerm()         const { return m_fiTerm;     }
+    ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:17,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:10,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:63:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int trackId()  const { return m_trackId;          }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:64:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double mass()  const { return m_mass[m_pidType];  }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:65:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int charge()   const { return m_charge[m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:66:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double pxy()   const { return m_pxy[m_pidType];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:67:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double px()    const { return m_px[m_pidType];    }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:68:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double py()    const { return m_py[m_pidType];    }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:69:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double pz()    const { return m_pz[m_pidType];    }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:70:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double theta() const { return m_theta[m_pidType]; }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:71:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double phi()   const { return m_phi[m_pidType];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:73:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double x()     const { return m_x[m_pidType];     }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:74:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double y()     const { return m_y[m_pidType];     }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:75:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double z()     const { return m_z[m_pidType];     }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:77:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double x(const int i)  const {return m_x[i];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:78:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double y(const int i)  const {return m_y[i];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:79:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double z(const int i)  const {return m_z[i];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:81:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double r()           const {return m_r[m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:82:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double p()           const {return m_p[m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:83:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    stat()        const {return m_stat[0][m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:84:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double chi2()        const {return m_chisq[0][m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:85:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    ndof()        const {return m_ndf[0][m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:86:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    nster()       const {return m_nster[0][m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:87:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    firstLayer()  const {return m_firstLayer[0][m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:88:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    lastLayer()   const {return m_lastLayer[0][m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:89:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int    nlayer()      const {return m_nlayer[m_pidType];}
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:91:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double  dr( void )   const { return m_zhelixs[m_pidType][0];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:92:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double fi0( void )   const { return m_zhelixs[m_pidType][1];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:93:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double kappa( void ) const { return m_zhelixs[m_pidType][2];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:94:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double dz( void )    const { return m_zhelixs[m_pidType][3];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:95:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double tanl( void )  const { return m_zhelixs[m_pidType][4];   }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:190:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getTrackId()                 const { return m_trackId;        }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:191:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getCharge(const int pid)     const { return m_charge[pid];    }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:192:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getStat( const int pid)      const { return m_stat[0][pid];      }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:193:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int  getNster(const int pid)     const { return m_nster[0][pid];     }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:194:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getChisq(const int pid)   const { return m_chisq[0][pid];     }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:195:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getNdf(const int pid)        const { return m_ndf[0][pid];       }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:196:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getFirstLayer(const int pid) const { return m_firstLayer[0][pid];}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:197:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getLastLayer(const int pid)  const { return m_lastLayer[0][pid]; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstMdcKalTrack.h:198:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int getNlayer(const int pid)  const { return m_nlayer[pid]; }
+   ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:10,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:72:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double    getTHelix(const int i) const { return m_thelix[i]; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:73:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double    getTError(const int i) const { return m_terror[i]; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:131:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double        getFiTerm(const int pid) const { return m_fiTerm[pid]; }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:135:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getZDr(void)   const { return m_zhelixs[2][0];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:136:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getZFi0(void)  const { return m_zhelixs[2][1];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:137:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getZCpa(void)  const { return m_zhelixs[2][2];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:138:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getZDz(void)   const { return m_zhelixs[2][3];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:139:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getZTanl(void) const { return m_zhelixs[2][4];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:141:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getLDr(void)   const { return m_lhelixs[2][0];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:142:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getLFi0(void)  const { return m_lhelixs[2][1];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:143:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getLCpa(void)  const { return m_lhelixs[2][2];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:144:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getLDz(void)   const { return m_lhelixs[2][3];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getLTanl(void) const { return m_lhelixs[2][4];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getFDr(void)   const { return m_fhelixs[2][0];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:148:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getFFi0(void)  const { return m_fhelixs[2][1];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getFCpa(void)  const { return m_fhelixs[2][2];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getFDz(void)   const { return m_fhelixs[2][3];   }
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcKalTrack.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double getFTanl(void) const { return m_fhelixs[2][4];   }
+   ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcDedx.h:19,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:11,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcDedxHit.h:50:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getTrkId(void) const { return m_trkid; }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcDedxHit.h:51:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const int getFlagLR(void) const { return m_lr;    }
+    ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Mdc/MdcRecEvent/MdcRecEvent-00-05-14/MdcRecEvent/RecMdcDedxHit.h:52:4: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    const double getDedx(void) const {return m_dedx; }
+    ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/ExtEvent/ExtEvent-00-00-13/ExtEvent/RecExtTrack.h:23,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:12,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:42:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int  GetTrackId() const {return m_trackId ;}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:43:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int  trackId() const {return m_trackId ;}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:64:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int tof1VolumeNumber() const {return myTof1VolumeNumber[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:65:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int tof1VolumeNumber(int parID) const {return myTof1VolumeNumber[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:66:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1() const {return myTof1[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:67:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1(int parID) const {return myTof1[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:68:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1Path() const {return myTof1Path[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:69:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1Path(int parID) const {return myTof1Path[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:70:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongZ() const {return myTof1PosSigmaAlongZ[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:71:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongZ(int parID) const {return myTof1PosSigmaAlongZ[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:72:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongT() const {return myTof1PosSigmaAlongT[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:73:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongT(int parID) const {return myTof1PosSigmaAlongT[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:74:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongX() const {return myTof1PosSigmaAlongX[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:75:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongX(int parID) const {return myTof1PosSigmaAlongX[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:76:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongY() const {return myTof1PosSigmaAlongY[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:77:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof1PosSigmaAlongY(int parID) const {return myTof1PosSigmaAlongY[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:100:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int tof2VolumeNumber() const {return myTof2VolumeNumber[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:101:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int tof2VolumeNumber(int parID) const {return myTof2VolumeNumber[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:102:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2() const {return myTof2[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:103:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2(int parID) const {return myTof2[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:104:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2Path() const {return myTof2Path[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:105:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2Path(int parID) const {return myTof2Path[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:106:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongZ() const {return myTof2PosSigmaAlongZ[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:107:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongZ(int parID) const {return myTof2PosSigmaAlongZ[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:108:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongT() const {return myTof2PosSigmaAlongT[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:109:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongT(int parID) const {return myTof2PosSigmaAlongT[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:110:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongX() const {return myTof2PosSigmaAlongX[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:111:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongX(int parID) const {return myTof2PosSigmaAlongX[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:112:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongY() const {return myTof2PosSigmaAlongY[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:113:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double tof2PosSigmaAlongY(int parID) const {return myTof2PosSigmaAlongY[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:132:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int emcVolumeNumber() const {return myEmcVolumeNumber[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:133:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int emcVolumeNumber(int parID) const {return myEmcVolumeNumber[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:134:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double emcPosSigmaAlongTheta() const {return myEmcPosSigmaAlongTheta[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:135:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double emcPosSigmaAlongTheta(int parID) const {return myEmcPosSigmaAlongTheta[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:136:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double emcPosSigmaAlongPhi() const {return myEmcPosSigmaAlongPhi[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:137:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double emcPosSigmaAlongPhi(int parID) const {return myEmcPosSigmaAlongPhi[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:140:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double emcPath() const {return myEmcPath[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:141:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double emcPath(int parID) const {return myEmcPath[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:160:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int mucVolumeNumber() const {return myMucVolumeNumber[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int mucVolumeNumber(int parID) const {return myMucVolumeNumber[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:162:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongZ() const { return myMucPosSigmaAlongZ[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:163:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongZ(int parID) const {return myMucPosSigmaAlongZ[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:164:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongT() const {return myMucPosSigmaAlongT[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:165:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongT(int parID) const {return myMucPosSigmaAlongT[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:166:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongX() const {return myMucPosSigmaAlongX[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:167:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongX(int parID) const {return myMucPosSigmaAlongX[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:168:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongY() const {return myMucPosSigmaAlongY[myParticleType];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:169:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double mucPosSigmaAlongY(int parID) const {return myMucPosSigmaAlongY[parID];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:174:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const double MucKalchi2() const { return  myMucKalchi2[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:175:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const double MucKalchi2(int parID) const { return  myMucKalchi2[1];}
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:176:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int    MucKaldof() const { return  myMucKaldof[1];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:177:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const int    MucKaldof(int parID) const { return  myMucKaldof[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:178:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const double MucKaldepth() const { return  myMucKaldepth[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:179:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const double MucKaldepth(int parID) const { return  myMucKaldepth[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:180:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const int    MucKalbrLastLayer() const { return  myMucKalbrLastLayer[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:181:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const int    MucKalbrLastLayer(int parID) const { return  myMucKalbrLastLayer[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:182:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const int    MucKalecLastLayer() const { return  myMucKalecLastLayer[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:183:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const int    MucKalecLastLayer(int parID) const { return  myMucKalecLastLayer[1];};
+   ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:184:17: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+                 const int    MucKalnumHits() const { return  myMucKalnumHits[1];};
+                 ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:185:5: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     const int    MucKalnumHits(int parID) const { return  myMucKalnumHits[1];};
+     ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h: In member function ‘const double DstExtTrack::MucKalchi2(int) const’:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:175:31: warning: unused parameter ‘parID’ [-Wunused-parameter]
+   const double MucKalchi2(int parID) const { return  myMucKalchi2[1];}
+                           ~~~~^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h: In member function ‘const int DstExtTrack::MucKaldof(int) const’:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:177:44: warning: unused parameter ‘parID’ [-Wunused-parameter]
+                 const int    MucKaldof(int parID) const { return  myMucKaldof[1];};
+                                        ~~~~^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h: In member function ‘const double DstExtTrack::MucKaldepth(int) const’:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:179:46: warning: unused parameter ‘parID’ [-Wunused-parameter]
+                 const double MucKaldepth(int parID) const { return  myMucKaldepth[1];};
+                                          ~~~~^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h: In member function ‘const int DstExtTrack::MucKalbrLastLayer(int) const’:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:181:52: warning: unused parameter ‘parID’ [-Wunused-parameter]
+                 const int    MucKalbrLastLayer(int parID) const { return  myMucKalbrLastLayer[1];};
+                                                ~~~~^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h: In member function ‘const int DstExtTrack::MucKalecLastLayer(int) const’:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:183:38: warning: unused parameter ‘parID’ [-Wunused-parameter]
+   const int    MucKalecLastLayer(int parID) const { return  myMucKalecLastLayer[1];};
+                                  ~~~~^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h: In member function ‘const int DstExtTrack::MucKalnumHits(int) const’:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/Event/DstEvent/DstEvent-00-02-51/DstEvent/DstExtTrack.h:185:36: warning: unused parameter ‘parID’ [-Wunused-parameter]
+     const int    MucKalnumHits(int parID) const { return  myMucKalnumHits[1];};
+                                ~~~~^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Schema/Schema/define.h:8,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/G4Binding/G4Evaluator/G4Evaluator/GDMLDefineTable.h:5,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/G4Binding/G4Evaluator/G4Evaluator/GDMLExpressionEvaluator.h:9,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/G4Binding/G4Processor/G4Processor/GDMLProcessor.h:11,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/G4Geo/G4Geo/SubDetectorG4Geo.h:20,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/G4Geo/G4Geo/MucG4Geo.h:11,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucGeomSvc/MucGeomSvc/MucGeomSvc.h:19,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucRecEvent/MucRecEvent/MucRecHit.h:23,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucRecEvent/MucRecEvent/RecMucTrack.h:23,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:15,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Schema/Schema/defineType.h: At global scope:
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/external/BesGDML/2.8.0/x86_64-slc6-gcc46-opt/include/Common/Schema/Schema/defineType.h:55:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   const unsigned int size() const {
+   ^~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucRecEvent/MucRecEvent/MucRecHit.h:23,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucRecEvent/MucRecEvent/RecMucTrack.h:23,
+                 from /afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/EvtRecEvent/EvtRecEvent/EvtRecTrack.h:15,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:20,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucGeomSvc/MucGeomSvc/MucGeomSvc.h:36:11: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   virtual const MucGeoGeneral * const GetGeoGeneral();
+           ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucGeomSvc/MucGeomSvc/MucGeomSvc.h:37:11: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   virtual const MucGeoGap     * const GetGap(int part, int seg, int gap);
+           ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucGeomSvc/MucGeomSvc/MucGeomSvc.h:38:11: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   virtual const MucGeoStrip   * const GetStrip(int part, int seg, int gap, int strip);
+           ^~~~~
+/afs/ihep.ac.cn/bes3/offline/Boss/7.0.3/InstallArea/include/MucGeomSvc/MucGeomSvc/MucGeomSvc.h:39:11: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   virtual const MucG4Geo * const GetMucG4Geo();
+           ^~~~~
+../src/Prediction.cxx: In function ‘void free_buffer(void*, size_t)’:
+../src/Prediction.cxx:83:37: warning: unused parameter ‘length’ [-Wunused-parameter]
+ void free_buffer(void* data, size_t length) {
+                              ~~~~~~~^~~~~~
+../src/Prediction.cxx: In function ‘void Deallocator(void*, size_t, void*)’:
+../src/Prediction.cxx:87:44: warning: unused parameter ‘length’ [-Wunused-parameter]
+ static void Deallocator(void* data, size_t length, void* arg) {
+                                     ~~~~~~~^~~~~~
+../src/Prediction.cxx:87:58: warning: unused parameter ‘arg’ [-Wunused-parameter]
+ static void Deallocator(void* data, size_t length, void* arg) {
+                                                    ~~~~~~^~~
+../src/Prediction.cxx: In member function ‘virtual StatusCode Prediction::initialize()’:
+../src/Prediction.cxx:215:5: error: ‘status’ was not declared in this scope
+     status = m_tuple1->addItem ("EnSumHit",           m_EnSumHit );
+     ^~~~~~
+../src/Prediction.cxx:215:5: note: suggested alternative: ‘Status’
+     status = m_tuple1->addItem ("EnSumHit",           m_EnSumHit );
+     ^~~~~~
+     Status
+../src/Prediction.cxx: In member function ‘virtual StatusCode Prediction::execute()’:
+../src/Prediction.cxx:265:11: warning: unused variable ‘e_ext_z_new’ [-Wunused-variable]
+     float e_ext_z_new  = 0;
+           ^~~~~~~~~~~
+../src/Prediction.cxx:266:11: warning: unused variable ‘e_ext_Pz_new’ [-Wunused-variable]
+     float e_ext_Pz_new = 0;
+           ^~~~~~~~~~~~
+../src/Prediction.cxx:440:9: warning: unused variable ‘ii’ [-Wunused-variable]
+     int ii=0;
+         ^~
+../src/Prediction.cxx: In member function ‘void Prediction::MakerHitMap(const std::vector<Identifier>&, const std::vector<float>&, RecEmcHitMap&)’:
+../src/Prediction.cxx:468:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Identifier>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+     for(int i=0; i<vec_id.size(); i++)
+                  ~^~~~~~~~~~~~~~
+../src/Prediction.cxx: In member function ‘void Prediction::RemoveNoise(RecEmcHitMap&, const float&)’:
+../src/Prediction.cxx:520:66: warning: unused parameter ‘ElectronicsNoiseLevel’ [-Wunused-parameter]
+ void Prediction::RemoveNoise(RecEmcHitMap& aHitMap, const float& ElectronicsNoiseLevel)
+                                                     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/Prediction.cxx: In member function ‘int Prediction::getInfo(const IEmcRecGeoSvc*, const double&, const double&, const double&, const double&, const double&, const double&, const RecEmcCluster*, double&, double&, double&, double&, std::vector<Identifier>&, bool&)’:
+../src/Prediction.cxx:820:29: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+                 else if(iphi< 0) iphi = iphi + 120 ;
+                         ~~~~^~~
+../src/Prediction.cxx:763:46: warning: unused parameter ‘iGeoSvc’ [-Wunused-parameter]
+ int Prediction::getInfo(const IEmcRecGeoSvc* iGeoSvc, const double& x, const double& y, const double& z, const double& px, const double& py, const double& pz, const RecEmcCluster* clus, double& M_dtheta, double& M_dphi, double& P_dz, double& P_dphi, vector<RecEmcID>& cell_ID, bool& do_parity) {
+                         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+../src/Prediction.cxx: In function ‘void BeforeParity(const std::vector<float>&, std::vector<float>&)’:
+../src/Prediction.cxx:926:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+     for(int i=0; i<vec_in.size(); i++)
+                  ~^~~~~~~~~~~~~~
+../src/Prediction.cxx: In function ‘void Decoder(const std::vector<float>&, std::vector<float>&)’:
+../src/Prediction.cxx:940:21: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+     for(int i =0 ; i<tf_output.size(); i++)
+                    ~^~~~~~~~~~~~~~~~~
+In file included from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/SmartRefBase.h:15,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/SmartRef.h:14,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/DataTypeInfo.h:7,
+                 from /afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/NTuple.h:15,
+                 from /junofs/users/wxfang/FastSim/bes3/workarea/InstallArea/include/TF_Prediction/TF_Prediction/Prediction.h:4,
+                 from ../src/Prediction.cxx:6:
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/StreamBuffer.h: In member function ‘void StreamBuffer::swapToBuffer(const void*, int)’:
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/StreamBuffer.h:612:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     src = buff;
+     ~~~~^~~~~~
+/afs/ihep.ac.cn/bes3/offline/ExternalLib/SLC6/ExternalLib/gaudi/GAUDI_v23r9/InstallArea/x86_64-slc6-gcc46-opt/include/GaudiKernel/StreamBuffer.h:614:3: note: here
+   case NOSWAP:
+   ^~~~
+../src/Prediction.cxx: At global scope:
+../src/Prediction.cxx:87:13: warning: ‘void Deallocator(void*, size_t, void*)’ defined but not used [-Wunused-function]
+ static void Deallocator(void* data, size_t length, void* arg) {
+             ^~~~~~~~~~~
+make[2]: *** [../x86_64-slc6-gcc46-opt/Prediction.o] Error 1
+make[1]: *** [TF_Prediction] Error 2
+make: *** [all] Error 2

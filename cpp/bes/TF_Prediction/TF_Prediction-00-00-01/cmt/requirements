@@ -1,0 +1,39 @@
+package TF_Prediction
+
+author Li Weidong <liwd@mail.ihep.ac.cn>
+
+use BesPolicy    BesPolicy-01-* 
+use GaudiInterface GaudiInterface-01-* External 
+
+use Identifier       Identifier-*             DetectorDescription
+use BesROOT          BesROOT-00-*             External
+use EmcRecEventModel EmcRecEventModel-01-*    Emc
+use EmcRecGeoSvc     EmcRecGeoSvc-01-*        Emc
+use EmcCalibConstSvc EmcCalibConstSvc-*       Emc
+use RawDataProviderSvc  RawDataProviderSvc-*  Event
+
+use MdcRawEvent  MdcRawEvent-* Mdc
+use TofRawEvent  TofRawEvent-* Tof
+use EmcRawEvent  EmcRawEvent-* Emc
+use EmcRec         EmcRec-*         Reconstruction
+use EventModel   EventModel-*  Event
+use ReconEvent   ReconEvent-*  Event
+use EvtRecEvent EvtRecEvent-* Event
+
+
+
+
+macro_remove cppflags "-ansi -pedantic"
+macro_remove BesGeant4_cppflags "-ansi -pedantic"
+macro_append cflags " -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11 "
+macro_append cppflags " -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++11 "
+macro libtensorflow_root "/junofs/users/wxfang/FastSim/bes3/tf_cpp_test/v1.14.0"
+macro TF_Prediction_cflags " -I$(libtensorflow_root)/include "
+macro TF_Prediction_pp_cppflags " -I$(libtensorflow_root)/include "
+macro TF_Prediction_use_linkopts " -L$(libtensorflow_root)/lib -ltensorflow_framework -ltensorflow "
+macro TF_Prediction_linkopts " -L$(libtensorflow_root)/lib -ltensorflow_framework -ltensorflow "
+
+library TF_Prediction *.cxx components/*.cxx
+apply_pattern component_library 
+
+macro cpp_name g++

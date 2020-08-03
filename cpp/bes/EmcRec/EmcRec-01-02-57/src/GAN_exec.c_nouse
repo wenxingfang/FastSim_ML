@@ -1,0 +1,134 @@
+#include "GAN_exec.h"
+
+#include <fstream>
+#include <utility>
+#include <Eigen/Core>
+#include <Eigen/Dense>
+#include <iostream>
+ 
+#include "tensorflow/cc/ops/const_op.h"
+#include "tensorflow/cc/ops/image_ops.h"
+#include "tensorflow/cc/ops/standard_ops.h"
+ 
+#include "tensorflow/core/framework/graph.pb.h"
+#include "tensorflow/core/framework/tensor.h"
+ 
+#include "tensorflow/core/graph/default_device.h"
+#include "tensorflow/core/graph/graph_def_builder.h"
+ 
+#include "tensorflow/core/lib/core/errors.h"
+#include "tensorflow/core/lib/core/stringpiece.h"
+#include "tensorflow/core/lib/core/threadpool.h"
+#include "tensorflow/core/lib/io/path.h"
+#include "tensorflow/core/lib/strings/stringprintf.h"
+ 
+#include "tensorflow/core/public/session.h"
+#include "tensorflow/core/util/command_line_flags.h"
+ 
+#include "tensorflow/core/platform/env.h"
+#include "tensorflow/core/platform/init_main.h"
+#include "tensorflow/core/platform/logging.h"
+#include "tensorflow/core/platform/types.h"
+ 
+ 
+using namespace tensorflow::ops;
+using namespace tensorflow;
+using namespace std;
+using tensorflow::Flag;
+using tensorflow::Tensor;
+using tensorflow::Status;
+using tensorflow::string;
+using tensorflow::int32 ;
+
+
+int predict (const std::string& model_path, const std::string& input_tensor_name, const std::string& output_tensor_name, const std::vector<double>& input, std::vector<double>& output){
+
+    string input_tensor_name = input_tensor_name //"input_1_1:0";
+    string output_tensor_name = output_tensor_name//"activation_2_1/Softmax:0";
+    /*--------------------------------创建session------------------------------*/
+    Session* session;
+    Status status = NewSession(SessionOptions(), &session);//创建新会话Session
+    /*--------------------------------从pb文件中读取模型--------------------------------*/
+    GraphDef graphdef; //Graph Definition for current model
+    Status status_load = ReadBinaryProto(Env::Default(), model_path, &graphdef); //从pb文件中读取图模型;
+    if (!status_load.ok())
+    {
+        cout << "ERROR: Loading model failed..." << model_path << std::endl;
+        cout << status_load.ToString() << "\n";
+        return -1;
+    }
+    Status status_create = session->Create(graphdef); //将模型导入会话Session中;
+    if (!status_create.ok()) {
+        cout << "ERROR: Creating graph in session failed..." << status_create.ToString() << std::endl;
+        return -1;
+    }
+    cout << "<----Successfully created session and load graph.------->"<< endl;
+ 
+    //Tensor input_tensor(DT_FLOAT, TensorShape({1,6}));
+    // get pointer to memory for that Tensor
+    //float *p = input_tensor.flat<float>().data();
+    const float mom      = input.at(0);
+    const float M_dtheta = input.at(1);
+    const float M_dphi   = input.at(2)/10;
+    const float P_dz     = input.at(3);
+    const float P_dphi   = input.at(4);
+    //const float Z        = input.at(5)/100;
+    tensorflow::Input::Initializer input_tensor({mom, M_dtheta, M_dphi, P_dz, P_dphi}, tensorflow::TensorShape({1, 5}));
+
+    /*-----------------------------------用网络进行测试-----------------------------------------*/
+    cout<<endl<<"<-------------Running the model with test_image--------------->"<<endl;
+    //前向运行，输出结果一定是一个tensor的vector
+    vector<tensorflow::Tensor> outputs;
+    string output_node = output_tensor_name;
+    Status status_run = session->Run({{input_tensor_name, input_tensor}}, {output_node}, {}, &outputs);
+ 
+    if (!status_run.ok()) {
+        cout << "ERROR: RUN failed..."  << std::endl;
+        cout << status_run.ToString() << "\n";
+        return -1;
+    }
+    //把输出值给提取出来
+    cout << "Output tensor size:" << outputs.size() << std::endl;
+    for (std::size_t i = 0; i < outputs.size(); i++) {
+        cout << outputs[i].DebugString()<<endl;
+    }
+
+    Tensor t = outputs[0];      
+
+    unsigned int output_img_n0 = outputs[0].shape().dim_size(0);
+    unsigned int output_img_h0 = outputs[0].shape().dim_size(1);
+    unsigned int output_img_w0 = outputs[0].shape().dim_size(2);
+    unsigned int output_img_c0 = outputs[0].shape().dim_size(3);
+
+    for (unsigned int ni = 0; ni < output_img_n0; ni++)
+    {
+        for (unsigned int hi = 0; hi < output_img_h0; hi++)
+        {
+            for (unsigned int wi = 0; wi < output_img_w0; wi++)
+            {
+                for (unsigned int ci = 0; ci < output_img_c0; ci++)
+                {
+                float_t value;
+        // Get vaule through .flat()
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

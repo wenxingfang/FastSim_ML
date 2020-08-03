@@ -1,0 +1,5 @@
+#ifndef GAN_exec
+#define GAN_exec 1
+#include<vector>
+void predict (const std::vector<double>& input, std::vector<double>& output);
+#endif

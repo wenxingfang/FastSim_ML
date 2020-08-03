@@ -1,0 +1,37 @@
+//--------------------------------------------------------------
+// Private Application Configuration options
+//--------------------------------------------------------------
+
+#include "$EMCCALIBCONSTSVCROOT/share/jobOptions_EmcCalibConstSvc.txt"
+CalibRootCnvSvc.emcrootfile = "$BESCALDATA/constant/EmcCalibConst.root";
+
+ApplicationMgr.DLLs += { "EmcRec" };
+ApplicationMgr.DLLs += { "EmcRecGeoSvc" };
+ApplicationMgr.DLLs += { "RawDataProviderSvc" };
+
+ApplicationMgr.TopAlg += { "EmcRec" };
+ApplicationMgr.ExtSvc += { "EmcRecGeoSvc" };
+ApplicationMgr.ExtSvc += { "RawDataProviderSvc" };
+
+EmcRecAlg.Output=0;
+EmcRecAlg.EventNb=0;
+EmcRecAlg.DigiCalib=true;
+EmcRecAlg.TofEnergy=false;
+EmcRecAlg.OnlineMode=false;
+EmcRecAlg.TimeMin=0;
+EmcRecAlg.TimeMax=35;
+EmcRecAlg.PositionMode={"log","5x5"};
+
+EmcRecAlg.Do_GAN=0;
+
+//Method == 0 use old correction parameter
+//Method == 1 use new correction parameter from para-files
+EmcRecAlg.MethodMode=1;
+
+// PosCorr=0 is position with the uncorrection;
+// PosCorr=1 is position with the correction; 
+EmcRecAlg.PosCorr=1; 
+
+//ElecSaturation=1 MC reconstruction by using EmaxData from data
+//ElecSaturation=0 MC reconstruction by using Bhabha calibration
+EmcRecAlg.ElecSaturation=1;
